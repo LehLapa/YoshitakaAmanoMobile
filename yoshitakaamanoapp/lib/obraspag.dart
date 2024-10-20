@@ -1,25 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:yoshitakaamanoapp/teste.dart';
-//import 'package:carousel_slider/carousel_slider.dart';
-//import 'biografia.dart';
 
-class Home extends StatefulWidget {
-  const Home({super.key});
+class ObrasPag extends StatefulWidget {
+  const ObrasPag({super.key,});
 
   @override
-  State<Home> createState() => _Home();
+  State<ObrasPag> createState() => _ObrasPag();
 }
 
-class _Home extends State<Home> {
-  
-  navegar(){
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder:
-        (context) => const TestePag()),
-    );
-  }
-
+class _ObrasPag extends State<ObrasPag> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,8 +18,10 @@ class _Home extends State<Home> {
             color: const Color.fromARGB(255, 255, 248, 147),
             padding: const EdgeInsets.all(16.0),
             margin: const EdgeInsets.all(16.0),
+            child: const Text('oi'),
+          ),
         ),
-      ),),
+      ),
     );
   }
 }
