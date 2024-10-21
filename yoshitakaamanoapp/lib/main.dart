@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yoshitakaamanoapp/biografia.dart';
 import 'package:yoshitakaamanoapp/biopag.dart';
 import 'package:yoshitakaamanoapp/obraspag.dart';
+import 'package:yoshitakaamanoapp/empresapag.dart';
 
 void main() {
   runApp(const MyApp());
@@ -101,11 +102,14 @@ class _HomePag extends State<HomePag> {
               color: const Color.fromARGB(255, 255, 248, 147),
               padding: const EdgeInsets.all(16.0),
               margin: const EdgeInsets.all(16.0),
-              child: Text(yAmano.nome),
+              child: ElevatedButton(
+                onPressed: () => navegacao(const EmpresaPag()),
+                child: const Text('Empresa'),
+              ),
             ),
           ),
         ),
-      ),
+      ), 
     );
   }
 
