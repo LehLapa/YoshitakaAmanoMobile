@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:yoshitakaamanoapp/biografia.dart';
 import 'package:yoshitakaamanoapp/main.dart';
 import 'package:yoshitakaamanoapp/biopag.dart';
@@ -69,7 +70,15 @@ class _ObrasPag extends State<ObrasPag> {
             color: const Color.fromARGB(255, 255, 248, 147),
             padding: const EdgeInsets.all(16.0),
             margin: const EdgeInsets.all(16.0),
-            child: const Text('oi'),
+            child: Column(
+              children: [
+                CarouselSlider(
+                  items: [],
+                  options: ,
+                ),
+                CarouselSlider(items: [items], options: options)
+              ],
+            ),
           ),
         ),
       ),
