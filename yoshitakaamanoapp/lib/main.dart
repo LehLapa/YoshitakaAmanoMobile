@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yoshitakaamanoapp/biografia.dart';
+import 'package:yoshitakaamanoapp/yoshitaka.dart';
 import 'package:yoshitakaamanoapp/biopag.dart';
 import 'package:yoshitakaamanoapp/obraspag.dart';
-import 'package:yoshitakaamanoapp/empresapag.dart';
+//import 'package:yoshitakaamanoapp/empresapag.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,13 +28,14 @@ class HomePag extends StatefulWidget {
 
 class _HomePag extends State<HomePag> {
 
-  Biografia yAmano = Biografia(
-    tituloPag: [
+  Yoshitaka yAmano = Yoshitaka(
+    textosPags: [
       'Home', 
       'Biografia', 
       'Obras', 
       'Sua História', 
-      'Empresas'
+      'Empresas',
+      'Outros Jogos'
     ],
     nome: 'Yoshitaka Amano',
     img: [
@@ -78,17 +79,17 @@ class _HomePag extends State<HomePag> {
               children: [
                 buildIconButton(
                   icon: Icons.home,
-                  tooltip: yAmano.tituloPag[0],
+                  tooltip: yAmano.textosPags[0],
                   onPressed: () => navegacao(const HomePag()),
                 ),
                 buildIconButton(
                   icon: Icons.person,
-                  tooltip: yAmano.tituloPag[1],
+                  tooltip: yAmano.textosPags[1],
                   onPressed: () => navegacao(const BioPag()),
                 ),
                 buildIconButton(
                   icon: Icons.brush,
-                  tooltip: yAmano.tituloPag[2],
+                  tooltip: yAmano.textosPags[2],
                   onPressed: () => navegacao(const ObrasPag()),
                 ),
               ],
@@ -102,10 +103,10 @@ class _HomePag extends State<HomePag> {
               color: const Color.fromARGB(255, 255, 248, 147),
               padding: const EdgeInsets.all(16.0),
               margin: const EdgeInsets.all(16.0),
-              child: ElevatedButton(
+              /*child: ElevatedButton(
                 onPressed: () => navegacao(const EmpresaPag()),
                 child: const Text('Empresa'),
-              ),
+              ),*/
             ),
           ),
         ),

@@ -1,10 +1,10 @@
-class Biografia {
-  final List<String> tituloPag;
+class Yoshitaka {
+  final List<String> textosPags;
   final String nome;
   final List<String> img;
 
-  Biografia ({
-    required this.tituloPag,
+  Yoshitaka ({
+    required this.textosPags,
     required this.nome,
     required this.img
   });

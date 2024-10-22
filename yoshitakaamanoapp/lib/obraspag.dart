@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:yoshitakaamanoapp/biografia.dart';
+//import 'package:carousel_slider/carousel_slider.dart';
+import 'package:yoshitakaamanoapp/yoshitaka.dart';
 import 'package:yoshitakaamanoapp/main.dart';
 import 'package:yoshitakaamanoapp/biopag.dart';
 
@@ -24,7 +24,7 @@ class _ObrasPag extends State<ObrasPag> {
 
   @override
   Widget build(BuildContext context) {
-    final yAmano = ModalRoute.of(context)!.settings.arguments as Biografia;
+    final yAmano = ModalRoute.of(context)!.settings.arguments as Yoshitaka;
     return Scaffold(
       bottomNavigationBar: Stack(
         children: [
@@ -46,17 +46,17 @@ class _ObrasPag extends State<ObrasPag> {
             children: [
               buildIconButton(
                 icon: Icons.home,
-                tooltip: yAmano.tituloPag[0],
+                tooltip: yAmano.textosPags[0],
                 onPressed: () => navegacao(const HomePag()),
               ),
               buildIconButton(
                 icon: Icons.person,
-                tooltip: yAmano.tituloPag[1],
+                tooltip: yAmano.textosPags[1],
                 onPressed: () => navegacao(const BioPag()),
               ),
               buildIconButton(
                 icon: Icons.brush,
-                tooltip: yAmano.tituloPag[2],
+                tooltip: yAmano.textosPags[2],
                 onPressed: () => navegacao(const ObrasPag()),
               ),
             ],
@@ -72,11 +72,12 @@ class _ObrasPag extends State<ObrasPag> {
             margin: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-                CarouselSlider(
+                /*CarouselSlider(
                   items: [],
                   options: ,
                 ),
-                CarouselSlider(items: [items], options: options)
+                CarouselSlider(items: [items], options: options)*/
+                Text(yAmano.textosPags[2])
               ],
             ),
           ),

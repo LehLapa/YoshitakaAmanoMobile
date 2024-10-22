@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yoshitakaamanoapp/main.dart';
-import 'package:yoshitakaamanoapp/biopag.dart';
-import 'package:yoshitakaamanoapp/obraspag.dart';
-import 'biografia.dart';
+import 'empresa.dart';
 
 class EmpresaPag extends StatefulWidget {
   const EmpresaPag({super.key});
@@ -53,44 +50,11 @@ class _EmpresaPag extends State<EmpresaPag> {
   
   @override
   Widget build(BuildContext context) {
-    final yAmano = ModalRoute.of(context)!.settings.arguments as Biografia;
+    final empresa = ModalRoute.of(context)!.settings.arguments as Empresa;
     return Scaffold(
-      bottomNavigationBar: Stack(
-        children: [
-          Container(
-            height: 60,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 15, 66, 107),
-                  Color.fromARGB(255, 0, 20, 49),
-                ],
-              ),
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buildIconButton(
-                icon: Icons.home,
-                tooltip: yAmano.tituloPag[0],
-                onPressed: () => navegacao(const HomePag()),
-              ),
-              buildIconButton(
-                icon: Icons.person,
-                tooltip: yAmano.tituloPag[1],
-                onPressed: () => navegacao(const BioPag()),
-              ),
-              buildIconButton(
-                icon: Icons.brush,
-                tooltip: yAmano.tituloPag[2],
-                onPressed: () => navegacao(const ObrasPag()),
-              ),
-            ],
-          ),
-        ],
+      appBar: AppBar(
+        leading: const Icon(Icons.arrow_back),
+        backgroundColor: const Color.fromARGB(0, 0, 0, 0),
       ),
       body: Container(
         color: const Color.fromARGB(255, 255, 216, 108),
@@ -102,18 +66,21 @@ class _EmpresaPag extends State<EmpresaPag> {
             child: Column(
               children: <Widget>[
                 Text(
+                  empresa.nomeEmpresa
+                ),
+                Text(
                   teste[index],
                 ),
                 Row(
                   children: [
                     buildElevatedButton(
-                      onPressed: () => avancar(),
+                      onPressed: () => empresa.avancar(index = 0),
                       child: const Text('Avançar'),
                     ),
                     buildElevatedButton(
-                      onPressed: () => voltar(), 
+                      onPressed: () => empresa.voltar(index), 
                       child: const Text('Voltar')
-                    )
+                    ),
                   ]
                 )
               ],
