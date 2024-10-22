@@ -22,7 +22,7 @@ Neste projeto iremos fazer uma aplicação móvel sobre Yoshitaka Amano, falando
 
 ### Protótipo Imagens
 
-- <a href="https://github.com/LehLapa/YoshitakaAmanoMobile/wiki/Protótipo"> Prototipação e Apresentações dos Widgets </a>
+- <a href="https://github.com/LehLapa/YoshitakaAmanoMobile/wiki/Protótipo"> Prototipação e Funcionalidade das Telas </a>
 
 ##
 
