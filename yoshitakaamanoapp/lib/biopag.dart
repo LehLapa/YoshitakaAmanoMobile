@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:yoshitakaamanoapp/yoshitaka.dart';
 import 'package:yoshitakaamanoapp/empresa.dart';
 import 'package:yoshitakaamanoapp/empresapag.dart';
-import 'package:yoshitakaamanoapp/main.dart';
-import 'package:yoshitakaamanoapp/obraspag.dart';
 
 class BioPag extends StatefulWidget {
   const BioPag({super.key,});
@@ -25,19 +23,25 @@ class _BioPag extends State<BioPag> {
 
   List<Empresa> empresas = [
     Empresa(
-      nomeEmpresa: 'Square', 
+      nome: 'Square', 
       imgLogo: 'img/square.png', 
-      descricao: 'descricao'
+      descricao: 'descricao',
+      funcao: '',
+      urlSiteEmpresa: ''
     ),
     Empresa(
-      nomeEmpresa: 'Kure Software Koubou', 
+      nome: 'Kure Software Koubou', 
       imgLogo: 'img/ksk.png', 
-      descricao: 'descricao'
+      descricao: 'descricao',
+      funcao: '',
+      urlSiteEmpresa: ''
     ),
     Empresa(
-      nomeEmpresa: 'lalala', 
+      nome: 'lalala', 
       imgLogo: 'img/lalala.png', 
-      descricao: 'descricao'
+      descricao: 'descricao',
+      funcao: '',
+      urlSiteEmpresa: ''
     ),
   ];
 
@@ -47,43 +51,6 @@ class _BioPag extends State<BioPag> {
   Widget build(BuildContext context) {
     final yAmano = ModalRoute.of(context)!.settings.arguments as Yoshitaka;
     return Scaffold(
-      bottomNavigationBar: Stack(
-        children: [
-          Container(
-            height: 60,
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  Color.fromARGB(255, 15, 66, 107),
-                  Color.fromARGB(255, 0, 20, 49),
-                ],
-              ),
-            ),
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buildIconButton(
-                icon: Icons.home,
-                tooltip: yAmano.textosPags[0],
-                onPressed: () => navegacao(const HomePag()),
-              ),
-              buildIconButton(
-                icon: Icons.person,
-                tooltip: yAmano.textosPags[1],
-                onPressed: () => navegacao(const BioPag()),
-              ),
-              buildIconButton(
-                icon: Icons.brush,
-                tooltip: yAmano.textosPags[2],
-                onPressed: () => navegacao(const ObrasPag()),
-              ),
-            ],
-          ),
-        ],
-      ),
       body: Container(
         color: const Color.fromARGB(255, 255, 216, 108),
         child: Center(
@@ -93,6 +60,7 @@ class _BioPag extends State<BioPag> {
             margin: const EdgeInsets.all(16.0),
             child: Column(
               children: [
+                Text(yAmano.bio),
                 Expanded(
                   child:ListView.builder(
                     itemCount: empresas.length,
@@ -105,7 +73,7 @@ class _BioPag extends State<BioPag> {
                       return Card( 
                         child: ListTile(
                           leading: Image.asset(empresas[index].imgLogo),
-                          title: Text(empresas[index].nomeEmpresa, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
+                          title: Text(empresas[index].nome, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
                           subtitle: Text(empresas[index].descricao.toString(), style: const TextStyle(color: Color.fromARGB(255, 163, 119, 23)),),
                           hoverColor: const Color.fromARGB(255, 15, 66, 107),
                           selectedTileColor: const Color.fromARGB(255, 53, 0, 102),

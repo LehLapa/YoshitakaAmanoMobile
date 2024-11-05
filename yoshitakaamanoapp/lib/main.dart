@@ -1,11 +1,30 @@
 import 'package:flutter/material.dart';
-import 'package:yoshitakaamanoapp/yoshitaka.dart';
-import 'package:yoshitakaamanoapp/biopag.dart';
+import 'package:yoshitakaamanoapp/home.dart';
 import 'package:yoshitakaamanoapp/obraspag.dart';
-//import 'package:yoshitakaamanoapp/empresapag.dart';
+//import 'package:yoshitakaamanoapp/yoshitaka.dart';
 
 void main() {
   runApp(const MyApp());
+}
+
+class Main {
+  final List<String> textos;
+  final List<IconData> icons;
+
+  Main ({
+    required this.textos,
+    required this.icons
+  });
+
+  Widget indexStack(int index){
+    return IndexedStack(
+      index: index,
+      children: const <Widget>[
+        HomePag(),
+        ObrasPag()
+      ],
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {
@@ -14,45 +33,31 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePag(),
+      home: MainPag(),
     );
   }
 }
 
-class HomePag extends StatefulWidget {
-  const HomePag({super.key});
+class MainPag extends StatefulWidget {
+  const MainPag({super.key});
 
   @override
-  State<HomePag> createState() => _HomePag();
+  State<MainPag> createState() => _MainPag();
 }
 
-class _HomePag extends State<HomePag> {
+class _MainPag extends State<MainPag> {
+  int index = 0;
 
-  Yoshitaka yAmano = Yoshitaka(
-    textosPags: [
-      'Home', 
-      'Biografia', 
-      'Obras', 
-      'Sua História', 
-      'Empresas',
-      'Outros Jogos'
+  final Main main = Main(
+    textos: [
+      'Home',
+      'Obras'
     ],
-    nome: 'Yoshitaka Amano',
-    img: [
-      'img'
+    icons: [
+      Icons.home,
+      Icons.brush_rounded
     ],
   );
-
-  // método de navegação
-  void navegacao(Widget pagina) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => pagina,
-        settings: RouteSettings(arguments: yAmano),
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,60 +79,26 @@ class _HomePag extends State<HomePag> {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                buildIconButton(
-                  icon: Icons.home,
-                  tooltip: yAmano.textosPags[0],
-                  onPressed: () => navegacao(const HomePag()),
+            BottomNavigationBar(
+              backgroundColor: Colors.transparent,
+              unselectedItemColor: Colors.black,
+              fixedColor: const Color.fromARGB(255, 122, 69, 0),
+              currentIndex: index,
+              items: [
+                BottomNavigationBarItem(
+                  icon: Icon(main.icons[0]),
+                  label: main.textos[0]
                 ),
-                buildIconButton(
-                  icon: Icons.person,
-                  tooltip: yAmano.textosPags[1],
-                  onPressed: () => navegacao(const BioPag()),
-                ),
-                buildIconButton(
-                  icon: Icons.brush,
-                  tooltip: yAmano.textosPags[2],
-                  onPressed: () => navegacao(const ObrasPag()),
-                ),
-              ],
-            ),
+                BottomNavigationBarItem(
+                  icon: Icon(main.icons[0]),
+                  label: main.textos[0]
+                )
+              ]
+            )
           ],
         ),
-        body: Container(
-          color: const Color.fromARGB(255, 255, 216, 108),
-          child: Center(
-            child: Container(
-              color: const Color.fromARGB(255, 255, 248, 147),
-              padding: const EdgeInsets.all(16.0),
-              margin: const EdgeInsets.all(16.0),
-              /*child: ElevatedButton(
-                onPressed: () => navegacao(const EmpresaPag()),
-                child: const Text('Empresa'),
-              ),*/
-            ),
-          ),
-        ),
+        body: main.indexStack(index)
       ), 
-    );
-  }
-
-  // função que cria os botões da bottomnavigationbar
-  Widget buildIconButton({
-    required IconData icon,
-    required String tooltip,
-    required VoidCallback onPressed,
-  }) {
-    return SizedBox(
-      width: 60,
-      height: 60,
-      child: IconButton(
-        icon: Icon(icon, color: Colors.white),
-        tooltip: tooltip,
-        onPressed: onPressed,
-      ),
     );
   }
 }

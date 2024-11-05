@@ -66,7 +66,7 @@ class _EmpresaPag extends State<EmpresaPag> {
             child: Column(
               children: <Widget>[
                 Text(
-                  empresa.nomeEmpresa
+                  empresa.nome
                 ),
                 Text(
                   teste[index],
@@ -74,11 +74,11 @@ class _EmpresaPag extends State<EmpresaPag> {
                 Row(
                   children: [
                     buildElevatedButton(
-                      onPressed: () => empresa.avancar(index = 0),
+                      onPressed: () => avancar(),
                       child: const Text('Avançar'),
                     ),
                     buildElevatedButton(
-                      onPressed: () => empresa.voltar(index), 
+                      onPressed: () => voltar(), 
                       child: const Text('Voltar')
                     ),
                   ]

@@ -1,35 +1,16 @@
 class Empresa {
-  final String nomeEmpresa;
+  final String nome;
   final String imgLogo;
   final String descricao;
+  final String funcao;
+  final String urlSiteEmpresa;
 
   Empresa ({
-    required this.nomeEmpresa,
+    required this.nome,
     required this.imgLogo,
     required this.descricao,
+    required this.funcao,
+    required this.urlSiteEmpresa,
   });
 
-  void avancar(index){
-    if(index < 2){
-      setState(() {
-        index = index+1;
-      });
-    }
-    else {
-      index = 2;
-    }
-  }
-
-  voltar(index){
-    if(index > 0){
-      setState(() {
-        index = index-1;
-      });
-    }
-    else {
-      index = 0;
-    }
-  }
-  
-  void setState(Null Function() param0) {}
 }
