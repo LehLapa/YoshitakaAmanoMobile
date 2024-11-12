@@ -12,15 +12,6 @@ class BioPag extends StatefulWidget {
 
 class _BioPag extends State<BioPag> {
 
-  void navegacao(Widget pagina) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => pagina,
-      ),
-    );
-  }
-
   List<Empresa> empresas = [
     Empresa(
       nome: 'Square', 
@@ -51,6 +42,15 @@ class _BioPag extends State<BioPag> {
   Widget build(BuildContext context) {
     final yAmano = ModalRoute.of(context)!.settings.arguments as Yoshitaka;
     return Scaffold(
+      appBar: AppBar(
+        leading: construirIconButton(
+          icon: yAmano.icon, 
+          tooltip: yAmano.textosPags[5], 
+          onPressed: () => Navigator.pop,
+        ),
+        title: construirTitulo(title: yAmano.textosPags[1]),
+        backgroundColor: const Color.fromARGB(255, 255, 216, 108),
+      ),
       body: Container(
         color: const Color.fromARGB(255, 255, 216, 108),
         child: Center(
@@ -99,7 +99,7 @@ class _BioPag extends State<BioPag> {
     );
   }
 
-  Widget buildIconButton({
+  Widget construirIconButton({
     required IconData icon,
     required String tooltip,
     required VoidCallback onPressed,
@@ -112,6 +112,14 @@ class _BioPag extends State<BioPag> {
         tooltip: tooltip,
         onPressed: onPressed,
       ),
+    );
+  }
+
+  Widget construirTitulo({
+    required String title
+  }){
+    return Text(
+      title
     );
   }
 }

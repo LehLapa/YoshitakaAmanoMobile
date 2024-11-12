@@ -19,15 +19,14 @@ class _ObrasPag extends State<ObrasPag> {
             color: const Color.fromARGB(255, 255, 248, 147),
             padding: const EdgeInsets.all(16.0),
             margin: const EdgeInsets.all(16.0),
-            child: Column(
+            child: const Column(
               children: [
                 /*CarouselSlider(
                   items: [],
                   options: ,
                 ),
                 CarouselSlider(items: [items], options: options)*/
-                const Text('yAmano.textosPags[2]'),
-                Image.asset('name')
+                Text('yAmano.textosPags[2]'),
               ],
             ),
           ),

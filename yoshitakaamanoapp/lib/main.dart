@@ -7,26 +7,6 @@ void main() {
   runApp(const MyApp());
 }
 
-class Main {
-  final List<String> textos;
-  final List<IconData> icons;
-
-  Main ({
-    required this.textos,
-    required this.icons
-  });
-
-  Widget indexStack(int index){
-    return IndexedStack(
-      index: index,
-      children: const <Widget>[
-        HomePag(),
-        ObrasPag()
-      ],
-    );
-  }
-}
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -47,17 +27,6 @@ class MainPag extends StatefulWidget {
 
 class _MainPag extends State<MainPag> {
   int index = 0;
-
-  final Main main = Main(
-    textos: [
-      'Home',
-      'Obras'
-    ],
-    icons: [
-      Icons.home,
-      Icons.brush_rounded
-    ],
-  );
 
   @override
   Widget build(BuildContext context) {
@@ -84,20 +53,26 @@ class _MainPag extends State<MainPag> {
               unselectedItemColor: Colors.black,
               fixedColor: const Color.fromARGB(255, 122, 69, 0),
               currentIndex: index,
-              items: [
+              items: const [
                 BottomNavigationBarItem(
-                  icon: Icon(main.icons[0]),
-                  label: main.textos[0]
+                  icon: Icon(Icons.home),
+                  label: 'Home'
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(main.icons[0]),
-                  label: main.textos[0]
+                  icon: Icon(Icons.brush),
+                  label: 'Obras'
                 )
               ]
             )
           ],
         ),
-        body: main.indexStack(index)
+        body: IndexedStack(
+          index: index,
+          children: const <Widget>[
+            HomePag(),
+            ObrasPag()
+          ],
+        )
       ), 
     );
   }
