@@ -11,24 +11,8 @@ class EmpresaPag extends StatefulWidget {
 
 class _EmpresaPag extends State<EmpresaPag> {
 
-  int index = 0;
-
-  List<Colab> colabs = [
-    Colab(
-      '',
-      titulo: '',
-      imgs: [
-        '',
-      ],
-      descricao: '',
-      funcaoDev: '',
-      lancamento: '',
-      distribuidora: '',
-      icons: [
-        Icons.arrow_back_ios,
-      ],
-    ),
-  ];
+  int i = 0;
+  int p = 1;
 
   List<String> teste = [
     'a',
@@ -37,30 +21,56 @@ class _EmpresaPag extends State<EmpresaPag> {
   ];
 
   avancar(){
-    if(index < 2){
+    if(i < 2){
       setState(() {
-        index = index+1;
+        i = i+1;
       });
     }
     else {
-      index = 2;
+      i = 2;
     }
   }
 
   voltar(){
-    if(index > 0){
+    if(i > 0){
       setState(() {
-        index = index-1;
+        i = i-1;
       });
     }
     else {
-      index = 0;
+      i = 0;
     }
   }
   
   @override
   Widget build(BuildContext context) {
     final empresa = ModalRoute.of(context)!.settings.arguments as Empresa;
+    if(empresa.nome == 'Square'){
+      p;
+    }
+    else if(empresa.nome == 'Kure Software Koubou'){
+      p = 2;
+    }
+
+    List<Colab> colabs = [
+      Colab(
+        '',
+        titulo: '',
+        imgs: [
+          'img/colab/$p/1.jpg',
+          'img/colab/$p/2.jpg',
+          'img/colab/$p/3.jpg',
+        ],
+        descricao: '',
+        funcaoDev: '',
+        lancamento: '',
+        distribuidora: '',
+        icons: [
+          Icons.arrow_back_ios,
+        ],
+      ),
+    ];
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -85,7 +95,7 @@ class _EmpresaPag extends State<EmpresaPag> {
                   empresa.nome
                 ),
                 Text(
-                  teste[index],
+                  teste[i],
                 ),
                 Row(
                   children: [

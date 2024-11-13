@@ -16,14 +16,14 @@ class _BioPag extends State<BioPag> {
     Empresa(
       nome: 'Square', 
       imgLogo: 'img/square.png', 
-      descricao: 'descricao',
+      descricao: 'A Square Co., Ltd. (hoje conhecida como Square Enix) é uma empresa japonesa de videogames fundada em 1986 por Masafumi Miyamoto. Inicialmente, a Square se destacou no desenvolvimento de jogos para computadores pessoais, mas ganhou grande notoriedade com o lançamento de Final Fantasy em 1987. O jogo foi um enorme sucesso e estabeleceu a empresa como uma das maiores desenvolvedoras de jogos de RPG (role-playing game) no mundo.\n Ao longo dos anos, a Square lançou vários títulos da série Final Fantasy, cada um introduzindo inovações em jogabilidade, gráficos e narrativa, tornando a franquia uma das mais icônicas da história dos videogames. Além de Final Fantasy, a Square também criou outras franquias populares, como Chrono Trigger, Kingdom Hearts (em parceria com a Disney) e Secret of Mana.\n Em 2003, a Square se fundiu com a Enix, uma desenvolvedora japonesa igualmente renomada e conhecida pela franquia Dragon Quest, formando a Square Enix. Desde então, a empresa continuou a produzir títulos de sucesso e expandiu suas operações para várias áreas, incluindo desenvolvimento de jogos para dispositivos móveis e filmes, mantendo-se como uma das gigantes da indústria de entretenimento.',
       funcao: '',
       urlSiteEmpresa: ''
     ),
     Empresa(
       nome: 'Kure Software Koubou', 
       imgLogo: 'img/ksk.png', 
-      descricao: 'descricao',
+      descricao: 'Kure Software Koubou é uma desenvolvedora japonesa de jogos fundada em 1985, conhecida por ser uma das pioneiras no desenvolvimento de RPGs táticos e de estratégia. A empresa se destacou especialmente nos anos 80 e 90 com sua série Silver Ghost e títulos como First Queen, que combinaram elementos de RPG com batalhas em larga escala. Kure Software Koubou é reconhecida por introduzir mecânicas inovadoras, como controle simultâneo de vários personagens em combate, e por seus jogos com temas de fantasia medieval. Embora tenha um perfil relativamente discreto, a empresa tem um papel importante na história dos jogos de estratégia japoneses e segue criando títulos de nicho que atraem fãs leais.',
       funcao: '',
       urlSiteEmpresa: ''
     ),
