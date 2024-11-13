@@ -17,7 +17,7 @@ class _HomePag extends State<HomePag> {
     textosPags: [
       'Home', 
       'Biografia',
-      'Sua História', 
+      'SUA HISTORIA', 
       'Empresas',
       'Outros Jogos',
       'O renomado artista Yoshitaka Amano é conhecido por suas artes, principalmente por sua participação em…',

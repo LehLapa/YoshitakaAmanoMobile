@@ -14,30 +14,120 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
 
   late VideoPlayerController _videoPlayerController;
   bool isTocando = false;
+  int i = 1;
+  bool isVoltarDisable = true;
+  bool isAvancarDisable = false;
 
-  final Colab finalFant = Colab(
-    'video/finalfantasy.mp4',
-    titulo: 'FINAL FANTASY',
-    imgs: [
-      'img/finalfantasyfundo.jpg',
-      'img/finalfantasy.jpg'
-    ],
-    descricao: 'Final Fantasy é uma série icônica de jogos de RPG desenvolvida pela Square Enix, conhecida por suas histórias épicas, personagens cativantes e universos de fantasia ricos e variados. Iniciada em 1987, a série mistura temas de magia, tecnologia e guerras épicas, sempre abordando temas como amizade, sacrifício e luta contra as forças do mal. Cada jogo é independente em enredo, com novos personagens e cenários, mas há elementos recorrentes, como criaturas icônicas (Chocobos e Moogles), sistemas de combate estratégicos, invocações poderosas e magias elementares. Final Fantasy evoluiu visual e narrativamente ao longo dos anos, conquistando fãs pelo mundo todo e estabelecendo-se como uma das franquias de RPG mais influentes e bem-sucedidas da história dos videogames',
-    funcaoDev: '',
-    lancamento: '',
-    distribuidora: '',
-    icons: [
-      Icons.arrow_back_ios,
-      Icons.play_arrow_rounded,
-      Icons.pause_rounded,
-    ],
-  );
+  List<Colab> finalFant = [
+    Colab(
+      'video/finalfantasy.mp4',
+      titulo: 'FINAL FANTASY',
+      imgs: [
+        'img/finalfantasyfundo.jpg',
+        'img/finalfantasy.jpg'
+      ],
+      descricao: 'Final Fantasy é uma série icônica de jogos de RPG desenvolvida pela Square Enix, conhecida por suas histórias épicas, personagens cativantes e universos de fantasia ricos e variados. Iniciada em 1987, a série mistura temas de magia, tecnologia e guerras épicas, sempre abordando temas como amizade, sacrifício e luta contra as forças do mal. Cada jogo é independente em enredo, com novos personagens e cenários, mas há elementos recorrentes, como criaturas icônicas (Chocobos e Moogles), sistemas de combate estratégicos, invocações poderosas e magias elementares. Final Fantasy evoluiu visual e narrativamente ao longo dos anos, conquistando fãs pelo mundo todo e estabelecendo-se como uma das franquias de RPG mais influentes e bem-sucedidas da história dos videogames',
+      funcaoDev: '',
+      lancamento: '',
+      distribuidora: '',
+      icons: [
+        Icons.arrow_back_ios,
+        Icons.play_arrow_rounded,
+        Icons.pause_rounded,
+        Icons.arrow_forward_ios,
+      ],
+    ),
+    Colab(
+      '', 
+      titulo: 'Final Fantasy Type-0 (2011)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasy_Type0.jpg',
+      ], 
+      descricao: 'Ambientado em um mundo devastado por guerras entre nações, Final Fantasy Type-0 foca na luta de estudantes habilidosos do grupo Class Zero que lutam contra uma invasão imperial. O jogo é conhecido por seu enredo sombrio, sistema de combate em tempo real e foco em temas de sacrifício e camaradagem.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+    Colab(
+      '', 
+      titulo: 'Final Fantasy XIV (2010)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasyXIV.jpg',
+      ], 
+      descricao: 'Um MMORPG situado no mundo de Eorzea, onde jogadores podem se aventurar sozinhos ou em grupo para completar missões, enfrentar chefes e explorar diversas áreas. Após um lançamento inicial falho, o jogo foi relançado como Final Fantasy XIV: A Realm Reborn, ganhando enorme popularidade devido à sua narrativa épica e constante atualização de conteúdo.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+    Colab(
+      '', 
+      titulo: 'Final Fantasy XV (2016)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasyXV.jpg',
+      ], 
+      descricao: 'Focado em uma jornada de amizade e vingança, Final Fantasy XV segue o príncipe Noctis e seus amigos enquanto tentam recuperar o reino perdido de Lucis. Com um vasto mundo aberto, combate em tempo real e gráficos impressionantes, o jogo é conhecido pelo seu sistema de exploração e pela narrativa emocional.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+    Colab(
+      '', 
+      titulo: 'Dissidia Final Fantasy (2008)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasy_Dissidia.jpg',
+      ], 
+      descricao: 'Um jogo de luta que reúne heróis e vilões de diversos títulos da série Final Fantasy, onde os personagens combatem em arenas dinâmicas. O sistema de combate único permite o uso de habilidades icônicas e evocações, sendo popular entre fãs pela interação entre personagens de diferentes jogos.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+    Colab(
+      '', 
+      titulo: 'Dissidia 012 Final Fantasy (2011)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasy_Dissidia012.jpg',
+      ], 
+      descricao: 'Continuação de Dissidia Final Fantasy, que expande o elenco de personagens e oferece melhorias no sistema de combate e narrativa. A história aborda batalhas épicas entre os personagens de Final Fantasy em um conflito entre as forças de Cosmos e Chaos.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+    Colab(
+      '', 
+      titulo: 'Mobius Final Fantasy (2016)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasy_Mobius.jpg',
+      ], 
+      descricao: 'Um RPG para dispositivos móveis com gráficos avançados e um sistema de combate baseado em habilidades. O jogo segue a história de um herói amnésico que luta para salvar o mundo de Palamecia, trazendo uma narrativa complexa e eventos especiais com crossover de outros jogos da série.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+    Colab(
+      '', 
+      titulo: 'Final Fantasy: Brave Exvius (2016)', 
+      imgs: [
+        'img/finalfantasy/FinalFantasy_BraveExvius.jpg',
+      ], 
+      descricao: 'Um jogo de RPG tático para dispositivos móveis, onde jogadores exploram mapas e participam de batalhas em turnos. Brave Exvius combina um enredo original com a participação de personagens clássicos de Final Fantasy, sendo popular entre fãs por seu estilo nostálgico e eventos colaborativos.', 
+      funcaoDev: '', 
+      lancamento: 'lancamento', 
+      distribuidora: '', 
+      icons: []
+    ),
+  ];
 
   @override
   void initState(){
     super.initState();
     _videoPlayerController = VideoPlayerController.asset(
-      finalFant.video
+      finalFant[0].video
       )..initialize().then((_){
         setState((){
 
@@ -66,6 +156,36 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     }
   }
 
+  avancar(){
+    if(i < 7){
+      setState(() {
+        i = i+1;
+        isVoltarDisable = false;
+      });
+    }
+    else {
+      i = 7;
+      setState(() {
+        isAvancarDisable = true;
+      });
+    }
+  }
+
+  voltar(){
+    if(i > 1){
+      setState(() {
+        i = i-1;
+        isAvancarDisable = false;
+      });
+    }
+    else {
+      i = 1;
+      setState(() {
+        isVoltarDisable = true;
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final yAmano = ModalRoute.of(context)!.settings.arguments as Yoshitaka;
@@ -74,7 +194,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       home: Scaffold(
         appBar: AppBar(
           leading: construirIconButton(
-            icon: finalFant.icons[0],
+            icon: finalFant[0].icons[0],
             onPressed: () => Navigator.pop(context)
           ),
           backgroundColor: const Color.fromARGB(255, 255, 216, 108),
@@ -84,7 +204,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(finalFant.imgs[0]),
+                image: AssetImage(finalFant[0].imgs[0]),
                 opacity: 0.6,
                 fit: BoxFit.fitHeight,
               ),
@@ -100,7 +220,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                 child: Column(
                   children: [
                     Text(
-                      finalFant.titulo, 
+                      finalFant[0].titulo, 
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: 'FinalFantasy',
@@ -108,12 +228,12 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                       ),
                     ),
                     Image.asset(
-                      finalFant.imgs[1],
+                      finalFant[0].imgs[1],
                       width: 350,
                       height: 250,
                     ),
                     Text(
-                      finalFant.descricao,
+                      finalFant[0].descricao,
                       style: TextStyle(),
                     ),
                     Padding(padding: EdgeInsets.all(3)),
@@ -124,6 +244,34 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                         fontFamily: 'FinalFantasy'
                       ),
                     ),
+                    Text(
+                      finalFant[i].titulo,
+                    ),
+                    Image.asset(
+                      finalFant[i].imgs[0]
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        ElevatedButton(
+                          onPressed: isVoltarDisable ? null : () => voltar(),
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 215, 185, 116),),
+                          ),
+                          child: Icon(finalFant[0].icons[0], color: Colors.black,),
+                        ),
+                        ElevatedButton(
+                          onPressed: isAvancarDisable ? null : () => avancar(),
+                          style: ButtonStyle(
+                            backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 215, 185, 116),),
+                          ),
+                          child: Icon(finalFant[0].icons[3], color: Colors.black,)
+                        ),
+                      ],
+                    ),
+                    Text(finalFant[i].descricao),
+                    Text(finalFant[i].lancamento),
+                    Padding(padding: EdgeInsets.all(3)),
                     Text(
                       yAmano.textosPags[9],
                       style: TextStyle(
@@ -145,18 +293,13 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     IconButton(
                       icon: Icon(
                         isTocando
-                          ? finalFant.icons[2]
-                          : finalFant.icons[1],
+                          ? finalFant[0].icons[2]
+                          : finalFant[0].icons[1],
                         color: Colors.black,
                       ),
                       onPressed: (){
                         _playVideo();
                       },
-                    ),
-                    const SizedBox(
-                      width: 380,
-                      child: Text('',
-                      style: TextStyle(fontFamily: 'PixelifySans', fontSize: 10, fontWeight: FontWeight.w200),)
                     ),
                   ],
                 ),

@@ -72,7 +72,19 @@ class _BioPag extends State<BioPag> {
                 ),
                 child: Column(
                   children: [
-                    Text(yAmano.bio),
+                    Text(
+                      yAmano.textosPags[2],
+                      style: TextStyle(
+                        fontFamily: 'FinalFantasy',
+                        fontSize: 35,
+                      ),
+                    ),
+                    Text(
+                      yAmano.bio,
+                      style: TextStyle(
+                        fontFamily: 'Lora',
+                      ),
+                    ),
                     Expanded(
                       child:ListView.builder(
                         itemCount: empresas.length,
