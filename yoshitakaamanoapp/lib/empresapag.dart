@@ -60,9 +60,12 @@ class _EmpresaPag extends State<EmpresaPag> {
         color: const Color.fromARGB(255, 255, 216, 108),
         child: Center(
           child: Container(
-            color: const Color.fromARGB(255, 255, 248, 147),
             padding: const EdgeInsets.all(16.0),
             margin: const EdgeInsets.all(16.0),
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 255, 248, 147),
+              borderRadius: BorderRadius.circular(45)
+            ),
             child: Column(
               children: <Widget>[
                 Text(

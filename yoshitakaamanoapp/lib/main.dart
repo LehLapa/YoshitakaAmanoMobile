@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yoshitakaamanoapp/home.dart';
 import 'package:yoshitakaamanoapp/obraspag.dart';
-//import 'package:yoshitakaamanoapp/yoshitaka.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +25,7 @@ class MainPag extends StatefulWidget {
 }
 
 class _MainPag extends State<MainPag> {
-  int index = 0;
+  int opcaoSelecionada = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -42,17 +41,22 @@ class _MainPag extends State<MainPag> {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Color.fromARGB(255, 15, 66, 107),
-                    Color.fromARGB(255, 0, 20, 49),
+                    Color.fromARGB(255, 127, 110, 71),
+                    Color.fromARGB(255, 215, 185, 116),
                   ],
                 ),
               ),
             ),
             BottomNavigationBar(
               backgroundColor: Colors.transparent,
+              elevation: 0,
+              type: BottomNavigationBarType.fixed,
               unselectedItemColor: Colors.black,
               fixedColor: const Color.fromARGB(255, 122, 69, 0),
-              currentIndex: index,
+              currentIndex: opcaoSelecionada,
+              onTap: (opcao){
+                setState((){opcaoSelecionada = opcao;});
+              },
               items: const [
                 BottomNavigationBarItem(
                   icon: Icon(Icons.home),
@@ -67,7 +71,7 @@ class _MainPag extends State<MainPag> {
           ],
         ),
         body: IndexedStack(
-          index: index,
+          index: opcaoSelecionada,
           children: const <Widget>[
             HomePag(),
             ObrasPag()

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yoshitakaamanoapp/obra.dart';
 //import 'package:carousel_slider/carousel_slider.dart';
 
 class ObrasPag extends StatefulWidget {
@@ -9,6 +10,28 @@ class ObrasPag extends StatefulWidget {
 }
 
 class _ObrasPag extends State<ObrasPag> {
+  final List<Obra> obras = [
+    Obra(
+      textosPag: [
+        ''
+      ],
+      categoria: 'Devaloka',
+      img: [
+        ''
+      ],
+      descricao: '',
+    ),
+    Obra(
+      textosPag: [
+        ''
+      ],
+      categoria: '',
+      img: [
+        ''
+      ],
+      descricao: '',
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +39,6 @@ class _ObrasPag extends State<ObrasPag> {
         color: const Color.fromARGB(255, 255, 216, 108),
         child: Center(
           child: Container(
-            color: const Color.fromARGB(255, 255, 248, 147),
             padding: const EdgeInsets.all(16.0),
             margin: const EdgeInsets.all(16.0),
             child: const Column(
