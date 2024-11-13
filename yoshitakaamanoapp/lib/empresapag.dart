@@ -12,7 +12,7 @@ class EmpresaPag extends StatefulWidget {
 class _EmpresaPag extends State<EmpresaPag> {
 
   int i = 0;
-  int p = 1;
+  int p = 0;
 
   List<String> teste = [
     'a',
@@ -58,8 +58,6 @@ class _EmpresaPag extends State<EmpresaPag> {
         titulo: '',
         imgs: [
           'img/colab/$p/1.jpg',
-          'img/colab/$p/2.jpg',
-          'img/colab/$p/3.jpg',
         ],
         descricao: '',
         funcaoDev: '',
@@ -95,7 +93,10 @@ class _EmpresaPag extends State<EmpresaPag> {
                   empresa.nome
                 ),
                 Text(
-                  teste[i],
+                  colabs[i].titulo,
+                ),
+                Image.asset(
+                  colabs[i].imgs[i]
                 ),
                 Row(
                   children: [
@@ -107,8 +108,8 @@ class _EmpresaPag extends State<EmpresaPag> {
                       onPressed: () => voltar(), 
                       child: const Text('Voltar')
                     ),
-                  ]
-                )
+                  ],
+                ),
               ],
             ),
           ),

@@ -12,6 +12,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   carousel_slider: ^5.0.0
   video_player: ^2.9.2
+  url_launcher: ^6.3.1
+  dots_indicator: ^2.1.1
 
 dev_dependencies:
   flutter_test:
@@ -22,22 +24,21 @@ flutter:
   fonts:
     - family: Lora
       fonts:
-        - asset: fonts/Lora/Lora-Regular.ttf
-        - asset: fonts/Lora/Lora-Italic.ttf
-          style: italic
         - asset: fonts/Lora/Lora-Bold.ttf
           weight: 700
         - asset: fonts/Lora/Lora-BoldItalic.ttf
           style: italic
           weight: 700
-        - asset: fonts/Lora/Lora-Medium.ttf
-          weight: 300
     - family: FinalFantasy
       fonts:
         - asset: fonts/final_fantasy/finalf.ttf
+    - family: Ledger
+      fonts:
+        - asset: fonts/Ledger/Ledger-Regular.ttf
   uses-material-design: true
   assets:
     - img/
     - img/fotosyoshi/
     - img/finalfantasy/
+    - img/logos/
     - video/

@@ -39,85 +39,85 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     ),
     Colab(
       '', 
-      titulo: 'Final Fantasy Type-0 (2011)', 
+      titulo: 'Final Fantasy Type-0', 
       imgs: [
         'img/finalfantasy/FinalFantasy_Type0.jpg',
       ], 
       descricao: 'Ambientado em um mundo devastado por guerras entre nações, Final Fantasy Type-0 foca na luta de estudantes habilidosos do grupo Class Zero que lutam contra uma invasão imperial. O jogo é conhecido por seu enredo sombrio, sistema de combate em tempo real e foco em temas de sacrifício e camaradagem.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 27 de outubro de 2011.', 
       distribuidora: '', 
       icons: []
     ),
     Colab(
       '', 
-      titulo: 'Final Fantasy XIV (2010)', 
+      titulo: 'Final Fantasy XIV', 
       imgs: [
         'img/finalfantasy/FinalFantasyXIV.jpg',
       ], 
       descricao: 'Um MMORPG situado no mundo de Eorzea, onde jogadores podem se aventurar sozinhos ou em grupo para completar missões, enfrentar chefes e explorar diversas áreas. Após um lançamento inicial falho, o jogo foi relançado como Final Fantasy XIV: A Realm Reborn, ganhando enorme popularidade devido à sua narrativa épica e constante atualização de conteúdo.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 22 de setembro de 2010.', 
       distribuidora: '', 
       icons: []
     ),
     Colab(
       '', 
-      titulo: 'Final Fantasy XV (2016)', 
+      titulo: 'Final Fantasy XV', 
       imgs: [
         'img/finalfantasy/FinalFantasyXV.jpg',
       ], 
       descricao: 'Focado em uma jornada de amizade e vingança, Final Fantasy XV segue o príncipe Noctis e seus amigos enquanto tentam recuperar o reino perdido de Lucis. Com um vasto mundo aberto, combate em tempo real e gráficos impressionantes, o jogo é conhecido pelo seu sistema de exploração e pela narrativa emocional.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 29 de novembro de 2016.', 
       distribuidora: '', 
       icons: []
     ),
     Colab(
       '', 
-      titulo: 'Dissidia Final Fantasy (2008)', 
+      titulo: 'Dissidia Final Fantasy', 
       imgs: [
         'img/finalfantasy/FinalFantasy_Dissidia.jpg',
       ], 
       descricao: 'Um jogo de luta que reúne heróis e vilões de diversos títulos da série Final Fantasy, onde os personagens combatem em arenas dinâmicas. O sistema de combate único permite o uso de habilidades icônicas e evocações, sendo popular entre fãs pela interação entre personagens de diferentes jogos.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 18 de dezembro de 2008.', 
       distribuidora: '', 
       icons: []
     ),
     Colab(
       '', 
-      titulo: 'Dissidia 012 Final Fantasy (2011)', 
+      titulo: 'Dissidia 012 Final Fantasy', 
       imgs: [
         'img/finalfantasy/FinalFantasy_Dissidia012.jpg',
       ], 
       descricao: 'Continuação de Dissidia Final Fantasy, que expande o elenco de personagens e oferece melhorias no sistema de combate e narrativa. A história aborda batalhas épicas entre os personagens de Final Fantasy em um conflito entre as forças de Cosmos e Chaos.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 3 de março de 2011.', 
       distribuidora: '', 
       icons: []
     ),
     Colab(
       '', 
-      titulo: 'Mobius Final Fantasy (2016)', 
+      titulo: 'Mobius Final Fantasy', 
       imgs: [
         'img/finalfantasy/FinalFantasy_Mobius.jpg',
       ], 
       descricao: 'Um RPG para dispositivos móveis com gráficos avançados e um sistema de combate baseado em habilidades. O jogo segue a história de um herói amnésico que luta para salvar o mundo de Palamecia, trazendo uma narrativa complexa e eventos especiais com crossover de outros jogos da série.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 4 de junho de 2015.', 
       distribuidora: '', 
       icons: []
     ),
     Colab(
       '', 
-      titulo: 'Final Fantasy: Brave Exvius (2016)', 
+      titulo: 'Final Fantasy: Brave Exvius', 
       imgs: [
         'img/finalfantasy/FinalFantasy_BraveExvius.jpg',
       ], 
       descricao: 'Um jogo de RPG tático para dispositivos móveis, onde jogadores exploram mapas e participam de batalhas em turnos. Brave Exvius combina um enredo original com a participação de personagens clássicos de Final Fantasy, sendo popular entre fãs por seu estilo nostálgico e eventos colaborativos.', 
       funcaoDev: '', 
-      lancamento: 'lancamento', 
+      lancamento: 'Data de lançamento: 22 de outubro de 2015.', 
       distribuidora: '', 
       icons: []
     ),
@@ -192,13 +192,6 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          leading: construirIconButton(
-            icon: finalFant[0].icons[0],
-            onPressed: () => Navigator.pop(context)
-          ),
-          backgroundColor: const Color.fromARGB(255, 255, 216, 108),
-        ),
         body: Center(
           child: _videoPlayerController.value.isInitialized ?
           Container(
@@ -219,14 +212,24 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                 ),
                 child: Column(
                   children: [
-                    Text(
-                      finalFant[0].titulo, 
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'FinalFantasy',
-                        fontSize: 40,
-                      ),
+                    Row(
+                      children: [
+                        IconButton(
+                          onPressed: () => Navigator.pop(context), 
+                          icon: Icon(finalFant[0].icons[0], color: Colors.black,),
+                        ),
+                        Padding(padding: EdgeInsets.all(50)),
+                        Text(
+                          finalFant[0].titulo, 
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: 'FinalFantasy',
+                            fontSize: 40,
+                          ),
+                        ),
+                      ],
                     ),
+                    
                     Image.asset(
                       finalFant[0].imgs[1],
                       width: 350,
@@ -234,7 +237,9 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     ),
                     Text(
                       finalFant[0].descricao,
-                      style: TextStyle(),
+                      style: TextStyle(
+                        fontFamily: 'Ledger',
+                      ),
                     ),
                     Padding(padding: EdgeInsets.all(3)),
                     Text(
@@ -246,9 +251,15 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     ),
                     Text(
                       finalFant[i].titulo,
+                      style: TextStyle(
+                        fontFamily: 'Ledger',
+                        color: Colors.black
+                      ),
                     ),
                     Image.asset(
-                      finalFant[i].imgs[0]
+                      finalFant[i].imgs[0],
+                      height: 300,
+                      width: 300,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -260,6 +271,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                           ),
                           child: Icon(finalFant[0].icons[0], color: Colors.black,),
                         ),
+                        Padding(padding: EdgeInsets.all(5),),
                         ElevatedButton(
                           onPressed: isAvancarDisable ? null : () => avancar(),
                           style: ButtonStyle(

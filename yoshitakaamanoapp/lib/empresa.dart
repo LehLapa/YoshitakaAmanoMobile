@@ -1,3 +1,5 @@
+import 'package:url_launcher/url_launcher.dart';
+
 class Empresa {
   final String nome;
   final String imgLogo;
@@ -13,4 +15,10 @@ class Empresa {
     required this.urlSiteEmpresa,
   });
 
+  Future<void> abrirSite() async {
+    final Uri url = Uri.parse(urlSiteEmpresa);
+    if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
+    }
+  }
 }

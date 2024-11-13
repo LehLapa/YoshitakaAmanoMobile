@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Yoshitaka {
   final List<String> textosPags;
@@ -16,4 +17,11 @@ class Yoshitaka {
     required this.urlSite,
     required this.icon,
   });
+
+  Future<void> abrirSite() async {
+    final Uri url = Uri.parse(urlSite);
+    if (!await launchUrl(url)) {
+        throw Exception('Could not launch $url');
+    }
+  }
 }
