@@ -109,29 +109,33 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     ),
                     Image.asset(
                       finalFant.imgs[1],
-                      width: 300,
-                      height: 300,
+                      width: 350,
+                      height: 250,
                     ),
                     Text(
                       finalFant.descricao,
                       style: TextStyle(),
                     ),
+                    Padding(padding: EdgeInsets.all(3)),
                     Text(
                       yAmano.textosPags[8],
                       style: TextStyle(
                         fontSize: 35,
+                        fontFamily: 'FinalFantasy'
                       ),
                     ),
                     Text(
                       yAmano.textosPags[9],
                       style: TextStyle(
                         fontSize: 35,
+                        fontFamily: 'FinalFantasy'
                       ),
                     ),
                     Text(
                       yAmano.textosPags[10],
                       style: TextStyle(
                         fontSize: 25,
+                        fontFamily: 'FinalFantasy'
                       ),
                     ),
                     AspectRatio(

@@ -57,7 +57,9 @@ class _BioPag extends State<BioPag> {
           child: Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(yAmano.img[0])
+                image: AssetImage(yAmano.img[1]),
+                opacity: 0.6,
+                fit: BoxFit.fitHeight,
               )
             ),
             child: Align(

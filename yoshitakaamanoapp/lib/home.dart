@@ -23,13 +23,14 @@ class _HomePag extends State<HomePag> {
       'O renomado artista Yoshitaka Amano é conhecido por suas artes, principalmente por sua participação em…',
       'Voltar',
       'Final Fantasy',
-      'Outros Títulos da Franquia',
-      'Evolução Final Fantasy',
-      'Série Principal',
+      'OUTROS TITULOS DA FRANQUIA',
+      'EVOLUCAO DE FINAL FANTASY',
+      'SERIE PRINCIPAL',
     ],
     nome: 'YOSHITAKA\n AMANO',
     img: [
       'img/homefundo.jpg',
+      'img/biofundo.jpg',
       'img/fotosyoshi/yoshitaka1.jpg',
       'img/fotosyoshi/yoshitaka2.jpg',
       'img/fotosyoshi/yoshitaka3.jpg',
@@ -81,10 +82,10 @@ class _HomePag extends State<HomePag> {
                   autoPlayInterval: const Duration(seconds: 6)
                 ),
                 items: [
-                  Image.asset(yAmano.img[1]),
                   Image.asset(yAmano.img[2]),
                   Image.asset(yAmano.img[3]),
                   Image.asset(yAmano.img[4]),
+                  Image.asset(yAmano.img[5]),
                 ],
               ),
               Container(

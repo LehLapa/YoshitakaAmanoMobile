@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yoshitakaamanoapp/colab.dart';
 import 'empresa.dart';
 
 class EmpresaPag extends StatefulWidget {
@@ -9,16 +10,25 @@ class EmpresaPag extends StatefulWidget {
 }
 
 class _EmpresaPag extends State<EmpresaPag> {
-  void navegacao(Widget pagina) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => pagina,
-      ),
-    );
-  }
 
   int index = 0;
+
+  List<Colab> colabs = [
+    Colab(
+      '',
+      titulo: '',
+      imgs: [
+        '',
+      ],
+      descricao: '',
+      funcaoDev: '',
+      lancamento: '',
+      distribuidora: '',
+      icons: [
+        Icons.arrow_back_ios,
+      ],
+    ),
+  ];
 
   List<String> teste = [
     'a',
@@ -53,7 +63,10 @@ class _EmpresaPag extends State<EmpresaPag> {
     final empresa = ModalRoute.of(context)!.settings.arguments as Empresa;
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.arrow_back),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back),
+          onPressed: () => Navigator.pop(context),
+        ),
         backgroundColor: const Color.fromARGB(0, 0, 0, 0),
       ),
       body: Container(
