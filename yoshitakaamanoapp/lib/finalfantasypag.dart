@@ -322,26 +322,4 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       ),
     );
   }
-
-  Widget construirIconButton({
-    required IconData icon,
-    required VoidCallback onPressed,
-  }) {
-    return SizedBox(
-      width: 60,
-      height: 60,
-      child: IconButton(
-        icon: Icon(icon, color: Colors.black),
-        onPressed: onPressed,
-      ),
-    );
-  }
-
-  Widget construirTitulo({
-    required String title
-  }){
-    return Text(
-      title
-    );
-  }
 }

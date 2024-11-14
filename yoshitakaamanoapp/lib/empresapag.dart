@@ -100,11 +100,11 @@ class _EmpresaPag extends State<EmpresaPag> {
                 ),
                 Row(
                   children: [
-                    buildElevatedButton(
+                    ElevatedButton(
                       onPressed: () => avancar(),
                       child: const Text('Avançar'),
                     ),
-                    buildElevatedButton(
+                    ElevatedButton(
                       onPressed: () => voltar(), 
                       child: const Text('Voltar')
                     ),
@@ -115,32 +115,6 @@ class _EmpresaPag extends State<EmpresaPag> {
           ),
         ),
       ),
-    );
-  }
-
-    Widget buildIconButton({
-    required IconData icon,
-    required String tooltip,
-    required VoidCallback onPressed,
-  }) {
-    return SizedBox(
-      width: 60,
-      height: 60,
-      child: IconButton(
-        icon: Icon(icon, color: Colors.white),
-        tooltip: tooltip,
-        onPressed: onPressed,
-      ),
-    );
-  }
-
-  Widget buildElevatedButton({
-    required VoidCallback onPressed,
-    required Widget child,
-  }){
-    return ElevatedButton(
-        onPressed: onPressed, 
-        child: child
     );
   }
 }
