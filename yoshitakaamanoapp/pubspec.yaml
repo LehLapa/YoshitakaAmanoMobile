@@ -32,9 +32,9 @@ flutter:
     - family: FinalFantasy
       fonts:
         - asset: fonts/final_fantasy/finalf.ttf
-    - family: Ledger
+    - family: FacultyGlyphic
       fonts:
-        - asset: fonts/Ledger/Ledger-Regular.ttf
+        - asset: fonts/Faculty_Glyphic/FacultyGlyphic-Regular.ttf
   uses-material-design: true
   assets:
     - img/

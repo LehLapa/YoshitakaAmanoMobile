@@ -3,15 +3,6 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:yoshitakaamanoapp/empresapag.dart';
 import 'package:yoshitakaamanoapp/yoshitaka.dart';
 import 'package:yoshitakaamanoapp/empresa.dart';
-import 'package:yoshitakaamanoapp/squarepag.dart';
-import 'package:yoshitakaamanoapp/kskpag.dart';
-import 'package:yoshitakaamanoapp/atluspag.dart';
-import 'package:yoshitakaamanoapp/asciipag.dart';
-import 'package:yoshitakaamanoapp/capcompag.dart';
-import 'package:yoshitakaamanoapp/level5pag.dart';
-import 'package:yoshitakaamanoapp/compheartpag.dart';
-import 'package:yoshitakaamanoapp/mistwalkerpag.dart';
-import 'package:yoshitakaamanoapp/ubisoftpag.dart';
 
 class BioPag extends StatefulWidget {
   const BioPag({super.key,});
@@ -41,65 +32,67 @@ class _BioPag extends State<BioPag> {
     ),
     Empresa(
       nome: 'Atlus', 
-      imgLogo: 'img/logos/atlus.png', 
+      imgLogo: 'img/logos/atlus.jpg', 
       descricao: 'Atlus é uma desenvolvedora e publicadora japonesa de videogames, fundada em 1986, conhecida por criar jogos de RPG inovadores, com temas profundos e narrativas focadas em questões psicológicas e sociais. A empresa é especialmente renomada pela série Megami Tensei e seu spin-off Persona, que abordam dilemas emocionais e escolhas morais em ambientações urbanas e fantásticas. Atlus destaca-se por seu estilo artístico único, trilhas sonoras marcantes e personagens complexos. Desde 2013, a Atlus faz parte do grupo SEGA, mas mantém sua identidade criativa, lançando títulos que atraem uma base de fãs leal, especialmente no gênero de RPGs japoneses.',
       funcao: 'Atuou exclusivamente como designer de arte no jogo solo Kartia: The Word of Fate (1998).',
       urlSiteEmpresa: 'https://atlus.com'
     ),
     Empresa(
       nome: 'ASCII Corporation', 
-      imgLogo: 'img/logos/ascii.png', 
+      imgLogo: 'img/logos/ascii.jpg', 
       descricao: 'ASCII Corporation foi uma empresa japonesa fundada em 1977, conhecida por seu papel pioneiro na indústria de jogos e publicação de software, bem como por revistas e materiais de programação. Atuou no desenvolvimento e distribuição de jogos para consoles e computadores, sendo influente no desenvolvimento do MSX, um dos primeiros computadores domésticos no Japão. ASCII também ajudou a moldar o mercado de software japonês antes de se fundir com o Enterbrain em 2000.',
       funcao: 'Atuou exclusivamente como designer de arte no jogo solo Kartia: The Word of Fate (1998).',
       urlSiteEmpresa: ''
     ),
     Empresa(
       nome: 'Capcom', 
-      imgLogo: 'img/logos/capcom.png', 
+      imgLogo: 'img/logos/capcom.jpg', 
       descricao: 'Capcom é uma gigante japonesa de videogames, fundada em 1979 e conhecida por franquias icônicas como Street Fighter, Resident Evil e Mega Man. A empresa é conhecida por sua habilidade em criar jogos de ação com mecânicas refinadas, além de adaptar-se às novas tecnologias e tendências de jogos. Capcom tem sido uma força influente na indústria de jogos, popularizando gêneros e inovando em gráficos e jogabilidade.',
       funcao: 'Desenvolveu o design de personagens para o jogo solo Maten Densetsu (1995).',
       urlSiteEmpresa: 'https://www.capcom.com'
     ),
     Empresa(
       nome: 'Level-5', 
-      imgLogo: 'img/logos/level5.png', 
+      imgLogo: 'img/logos/level5.jpg', 
       descricao: 'Level-5 é uma desenvolvedora japonesa fundada em 1998, famosa por seus RPGs criativos e séries como Professor Layton, Ni no Kuni e Inazuma Eleven. Com uma abordagem única para a narrativa e um estilo gráfico vibrante, a Level-5 cria jogos que misturam exploração, mecânicas de RPG e histórias cativantes. A empresa é conhecida por sua atenção aos detalhes visuais e sua capacidade de construir mundos imersivos.',
       funcao: 'Para a Level-5, trabalhou como Designer de Imagem em Fantasy Life (2012).',
       urlSiteEmpresa: 'https://www.level5.co.jp'
     ),
     Empresa(
       nome: 'Compile Heart', 
-      imgLogo: 'img/logos/compileheart.png', 
+      imgLogo: 'img/logos/compileheart.jpg', 
       descricao: 'Compile Heart é uma subsidiária da Idea Factory, fundada em 2006, conhecida por seus RPGs voltados para o público japonês, como a série Hyperdimension Neptunia. A empresa se especializa em RPGs com um estilo visual de anime, histórias humorísticas e mecânicas de combate focadas em estratégias e habilidades combinadas, geralmente com personagens femininas marcantes e temas de fantasia.',
       funcao: 'Na desenvolvedora Compile Heart, contribuiu como designer de arte em Fairy Fencer F (2013) e como Designer de Imagem em Arc of Alchemist (2019), ambos jogos solo.',
       urlSiteEmpresa: 'https://www.compileheart.com'
     ),
     Empresa(
       nome: 'Mistwalker', 
-      imgLogo: 'img/logos/mistwalker.png', 
+      imgLogo: 'img/logos/mistwalker.jpg', 
       descricao: 'Mistwalker é um estúdio japonês fundado em 2004 por Hironobu Sakaguchi, o criador de Final Fantasy. O estúdio é conhecido por seus RPGs de alta qualidade, como Blue Dragon e Lost Odyssey, que combinam uma jogabilidade clássica de RPG com narrativas emocionantes e profundidade de personagens. Mistwalker continua inovando e lançando jogos independentes que refletem o estilo RPG japonês de Sakaguchi.',
       funcao: 'Exerceu a função de designer de personagens no jogo solo Terra Battle (2014), da Mistwalker.',
       urlSiteEmpresa: 'https://www.mistwalkercorp.com'
     ),
     Empresa(
       nome: 'Ubisoft', 
-      imgLogo: 'img/logos/ubisoft.png', 
+      imgLogo: 'img/logos/ubisoft.jpg', 
       descricao: "Ubisoft é uma empresa francesa de videogames, fundada em 1986, e uma das maiores publicadoras e desenvolvedoras do mundo. Conhecida por séries como Assassin's Creed, Far Cry e Rayman, Ubisoft se destaca por seus mundos abertos e narrativas ricas. A empresa investe em inovação, especialmente em jogos de aventura e ação, e tem estúdios ao redor do mundo.",
       funcao: 'Foi designer de imagem para o jogo solo Child of Light (2014), da Ubisoft.',
       urlSiteEmpresa: 'https://www.ubisoft.com'
     ),
-  ];
-
-  List<Widget> telas = [
-    SquarePag(),
-    KskPag(),
-    AtlusPag(),
-    AsciiPag(),
-    CapcomPag(),
-    Level5Pag(),
-    CompHeartPag(),
-    MistwalkerPag(),
-    UbisoftPag(),
+    Empresa(
+      nome: 'DC Comics', 
+      imgLogo: '', 
+      descricao: '', 
+      funcao: '', 
+      urlSiteEmpresa: ''
+    ),
+    Empresa(
+      nome: 'Marvel', 
+      imgLogo: '', 
+      descricao: '', 
+      funcao: '', 
+      urlSiteEmpresa: ''
+    ),
   ];
 
   navegacao(){
@@ -135,7 +128,7 @@ class _BioPag extends State<BioPag> {
                 margin: const EdgeInsets.all(16.0),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(45)),
-                  color: Color.fromARGB(255, 255, 248, 147),
+                  color: Color.fromARGB(210, 255, 246, 227),
                 ),
                 child: Column(
                   children: [
@@ -145,7 +138,7 @@ class _BioPag extends State<BioPag> {
                           onPressed: () => Navigator.pop(context), 
                           icon: Icon(yAmano.icon, color: Colors.black,),
                         ),
-                        Padding(padding: EdgeInsets.all(50)),
+                        Padding(padding: EdgeInsets.all(62)),
                         Text(
                           yAmano.textosPags[1], 
                           style: TextStyle(
@@ -165,14 +158,36 @@ class _BioPag extends State<BioPag> {
                     ),
                     Text(
                       yAmano.bio,
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontFamily: 'Lora',
+                        fontFamily: 'FacultyGlyphic',
                       ),
                     ),
+                    Padding(padding: EdgeInsets.all(5)),
                     ElevatedButton(
                       onPressed: yAmano.abrirSite,
-                      child: Text(yAmano.textosPags[11]),
+                      style: ButtonStyle(
+                        backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 215, 185, 116),),
+                      ),
+                      child: Text(
+                        yAmano.textosPags[11],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'Lora',
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
                     ),
+                    Padding(padding: EdgeInsets.all(10)),
+                    Text(
+                      yAmano.textosPags[3],
+                      style: TextStyle(
+                        fontFamily: 'FinalFantasy',
+                        fontSize: 35,
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(3)),
                     CarouselSlider(
                       options: CarouselOptions(
                         autoPlay: true,
@@ -223,30 +238,6 @@ class _BioPag extends State<BioPag> {
                         ),
                       ],
                     ),
-                    /*Expanded(
-                      child:ListView.builder(
-                        itemCount: empresas.length,
-                        shrinkWrap: true,
-                        padding: const EdgeInsets.all(5),
-                        scrollDirection: Axis.vertical,
-                        controller: _controller,
-                        clipBehavior: Clip.antiAlias,
-                        itemBuilder: (BuildContext ctx, index){
-                          return Card( 
-                            child: ListTile(
-                              leading: IconButton(
-                                icon: Image.asset(empresas[index].imgLogo),
-                                onPressed: () => navegacao(telas[index]),
-                              ),
-                              title: Text(empresas[index].nome, style: const TextStyle(color: Color.fromARGB(255, 255, 187, 0)),),
-                              subtitle: Text(empresas[index].funcao.toString(), style: const TextStyle(color: Color.fromARGB(255, 163, 119, 23)),),
-                              contentPadding: const EdgeInsets.all(5),
-                              tileColor: const Color.fromARGB(255, 0, 20, 49),
-                            ),
-                          );
-                        },
-                      ),
-                    ),*/
                   ],
                 ),
               ),
@@ -254,30 +245,6 @@ class _BioPag extends State<BioPag> {
           ),
         ),
       ),
-    );
-  }
-
-  Widget construirIconButton({
-    required IconData icon,
-    required String tooltip,
-    required VoidCallback onPressed,
-  }) {
-    return SizedBox(
-      width: 60,
-      height: 60,
-      child: IconButton(
-        icon: Icon(icon, color: Colors.black),
-        tooltip: tooltip,
-        onPressed: onPressed,
-      ),
-    );
-  }
-
-  Widget construirTitulo({
-    required String title
-  }){
-    return Text(
-      title
     );
   }
 }

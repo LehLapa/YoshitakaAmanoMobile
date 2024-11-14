@@ -26,7 +26,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
         'img/finalfantasyfundo.jpg',
         'img/finalfantasy.jpg'
       ],
-      descricao: 'Final Fantasy é uma série icônica de jogos de RPG desenvolvida pela Square Enix, conhecida por suas histórias épicas, personagens cativantes e universos de fantasia ricos e variados. Iniciada em 1987, a série mistura temas de magia, tecnologia e guerras épicas, sempre abordando temas como amizade, sacrifício e luta contra as forças do mal. Cada jogo é independente em enredo, com novos personagens e cenários, mas há elementos recorrentes, como criaturas icônicas (Chocobos e Moogles), sistemas de combate estratégicos, invocações poderosas e magias elementares. Final Fantasy evoluiu visual e narrativamente ao longo dos anos, conquistando fãs pelo mundo todo e estabelecendo-se como uma das franquias de RPG mais influentes e bem-sucedidas da história dos videogames',
+      descricao: 'Final Fantasy é uma série icônica de jogos de RPG desenvolvida pela Square Enix, conhecida por suas histórias épicas, personagens cativantes e universos de fantasia ricos e variados. Iniciada em 1987, a série mistura temas de magia, tecnologia e guerras épicas, sempre abordando temas como amizade, sacrifício e luta contra as forças do mal. Cada jogo é independente em enredo, com novos personagens e cenários, mas há elementos recorrentes, como criaturas icônicas (Chocobos e Moogles), sistemas de combate estratégicos, invocações poderosas e magias elementares. Final Fantasy evoluiu visual e narrativamente ao longo dos anos, conquistando fãs pelo mundo todo e estabelecendo-se como uma das franquias de RPG mais influentes e bem-sucedidas da história dos videogames.',
       funcaoDev: '',
       lancamento: '',
       distribuidora: '',
@@ -207,7 +207,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                 padding: const EdgeInsets.all(16.0),
                 margin: const EdgeInsets.all(16.0),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 255, 246, 227),
+                  color: const Color.fromARGB(210, 255, 246, 227),
                   borderRadius: BorderRadius.circular(45),
                 ),
                 child: Column(
@@ -229,7 +229,6 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                         ),
                       ],
                     ),
-                    
                     Image.asset(
                       finalFant[0].imgs[1],
                       width: 350,
@@ -237,8 +236,10 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     ),
                     Text(
                       finalFant[0].descricao,
+                      textAlign: TextAlign.justify,
                       style: TextStyle(
-                        fontFamily: 'Ledger',
+                        fontFamily: 'FacultyGlyphic',
+                        fontSize: 15,
                       ),
                     ),
                     Padding(padding: EdgeInsets.all(3)),
@@ -252,7 +253,8 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     Text(
                       finalFant[i].titulo,
                       style: TextStyle(
-                        fontFamily: 'Ledger',
+                        fontFamily: 'FacultyGlyphic',
+                        fontSize: 17,
                         color: Colors.black
                       ),
                     ),
@@ -267,7 +269,11 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                         ElevatedButton(
                           onPressed: isVoltarDisable ? null : () => voltar(),
                           style: ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 215, 185, 116),),
+                            backgroundColor: WidgetStatePropertyAll(
+                              isVoltarDisable
+                                ? Color.fromARGB(150, 102, 102, 102)
+                                : Color.fromARGB(255, 215, 185, 116),
+                            ),
                           ),
                           child: Icon(finalFant[0].icons[0], color: Colors.black,),
                         ),
@@ -275,15 +281,36 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                         ElevatedButton(
                           onPressed: isAvancarDisable ? null : () => avancar(),
                           style: ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll(Color.fromARGB(255, 215, 185, 116),),
+                            backgroundColor: WidgetStatePropertyAll(
+                              isAvancarDisable
+                                ? Color.fromARGB(150, 102, 102, 102)
+                                : Color.fromARGB(255, 215, 185, 116),
+                            ),
                           ),
                           child: Icon(finalFant[0].icons[3], color: Colors.black,)
                         ),
                       ],
                     ),
-                    Text(finalFant[i].descricao),
-                    Text(finalFant[i].lancamento),
-                    Padding(padding: EdgeInsets.all(3)),
+                    Padding(padding: EdgeInsets.all(5),),
+                    Text(
+                      finalFant[i].descricao,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        fontFamily: 'FacultyGlyphic',
+                        fontSize: 15,
+                        color: Colors.black
+                      ),
+                    ),
+                    Text(
+                      finalFant[i].lancamento,
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        fontFamily: 'FacultyGlyphic',
+                        fontSize: 15,
+                        color: Colors.black
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(5)),
                     Text(
                       yAmano.textosPags[9],
                       style: TextStyle(
