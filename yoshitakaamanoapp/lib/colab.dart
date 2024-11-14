@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class Colab {
   String video;
   final String titulo;
-  final List<String> imgs;
+  final String img;
   final String descricao;
   final String funcaoDev;
   final String lancamento;
@@ -14,7 +14,7 @@ class Colab {
     this.video,
   {
     required this.titulo,
-    required this.imgs,
+    required this.img,
     required this.descricao,
     required this.funcaoDev,
     required this.lancamento,

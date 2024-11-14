@@ -22,10 +22,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       'video/finalfantasy.mp4',
       titulo: 'FINAL FANTASY',
-      imgs: [
-        'img/finalfantasyfundo.jpg',
-        'img/finalfantasy.jpg'
-      ],
+      img: 'img/finalfantasy.jpg',
       descricao: 'Final Fantasy é uma série icônica de jogos de RPG desenvolvida pela Square Enix, conhecida por suas histórias épicas, personagens cativantes e universos de fantasia ricos e variados. Iniciada em 1987, a série mistura temas de magia, tecnologia e guerras épicas, sempre abordando temas como amizade, sacrifício e luta contra as forças do mal. Cada jogo é independente em enredo, com novos personagens e cenários, mas há elementos recorrentes, como criaturas icônicas (Chocobos e Moogles), sistemas de combate estratégicos, invocações poderosas e magias elementares. Final Fantasy evoluiu visual e narrativamente ao longo dos anos, conquistando fãs pelo mundo todo e estabelecendo-se como uma das franquias de RPG mais influentes e bem-sucedidas da história dos videogames.',
       funcaoDev: '',
       lancamento: '',
@@ -40,9 +37,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Final Fantasy Type-0', 
-      imgs: [
-        'img/finalfantasy/FinalFantasy_Type0.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasy_Type0.jpg',
       descricao: 'Ambientado em um mundo devastado por guerras entre nações, Final Fantasy Type-0 foca na luta de estudantes habilidosos do grupo Class Zero que lutam contra uma invasão imperial. O jogo é conhecido por seu enredo sombrio, sistema de combate em tempo real e foco em temas de sacrifício e camaradagem.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 27 de outubro de 2011.', 
@@ -52,9 +47,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Final Fantasy XIV', 
-      imgs: [
-        'img/finalfantasy/FinalFantasyXIV.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasyXIV.jpg',
       descricao: 'Um MMORPG situado no mundo de Eorzea, onde jogadores podem se aventurar sozinhos ou em grupo para completar missões, enfrentar chefes e explorar diversas áreas. Após um lançamento inicial falho, o jogo foi relançado como Final Fantasy XIV: A Realm Reborn, ganhando enorme popularidade devido à sua narrativa épica e constante atualização de conteúdo.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 22 de setembro de 2010.', 
@@ -64,9 +57,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Final Fantasy XV', 
-      imgs: [
-        'img/finalfantasy/FinalFantasyXV.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasyXV.jpg',
       descricao: 'Focado em uma jornada de amizade e vingança, Final Fantasy XV segue o príncipe Noctis e seus amigos enquanto tentam recuperar o reino perdido de Lucis. Com um vasto mundo aberto, combate em tempo real e gráficos impressionantes, o jogo é conhecido pelo seu sistema de exploração e pela narrativa emocional.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 29 de novembro de 2016.', 
@@ -76,9 +67,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Dissidia Final Fantasy', 
-      imgs: [
-        'img/finalfantasy/FinalFantasy_Dissidia.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasy_Dissidia.jpg',
       descricao: 'Um jogo de luta que reúne heróis e vilões de diversos títulos da série Final Fantasy, onde os personagens combatem em arenas dinâmicas. O sistema de combate único permite o uso de habilidades icônicas e evocações, sendo popular entre fãs pela interação entre personagens de diferentes jogos.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 18 de dezembro de 2008.', 
@@ -88,9 +77,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Dissidia 012 Final Fantasy', 
-      imgs: [
-        'img/finalfantasy/FinalFantasy_Dissidia012.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasy_Dissidia012.jpg',
       descricao: 'Continuação de Dissidia Final Fantasy, que expande o elenco de personagens e oferece melhorias no sistema de combate e narrativa. A história aborda batalhas épicas entre os personagens de Final Fantasy em um conflito entre as forças de Cosmos e Chaos.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 3 de março de 2011.', 
@@ -100,9 +87,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Mobius Final Fantasy', 
-      imgs: [
-        'img/finalfantasy/FinalFantasy_Mobius.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasy_Mobius.jpg',
       descricao: 'Um RPG para dispositivos móveis com gráficos avançados e um sistema de combate baseado em habilidades. O jogo segue a história de um herói amnésico que luta para salvar o mundo de Palamecia, trazendo uma narrativa complexa e eventos especiais com crossover de outros jogos da série.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 4 de junho de 2015.', 
@@ -112,9 +97,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
     Colab(
       '', 
       titulo: 'Final Fantasy: Brave Exvius', 
-      imgs: [
-        'img/finalfantasy/FinalFantasy_BraveExvius.jpg',
-      ], 
+      img: 'img/finalfantasy/FinalFantasy_BraveExvius.jpg',
       descricao: 'Um jogo de RPG tático para dispositivos móveis, onde jogadores exploram mapas e participam de batalhas em turnos. Brave Exvius combina um enredo original com a participação de personagens clássicos de Final Fantasy, sendo popular entre fãs por seu estilo nostálgico e eventos colaborativos.', 
       funcaoDev: '', 
       lancamento: 'Data de lançamento: 22 de outubro de 2015.', 
@@ -197,7 +180,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
           Container(
             decoration: BoxDecoration(
               image: DecorationImage(
-                image: AssetImage(finalFant[0].imgs[0]),
+                image: AssetImage(yAmano.imgs[0]),
                 opacity: 0.6,
                 fit: BoxFit.fitHeight,
               ),
@@ -220,7 +203,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                         ),
                         Padding(padding: EdgeInsets.all(50)),
                         Text(
-                          finalFant[0].titulo, 
+                          finalFant[0].titulo.toUpperCase(), 
                           style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'FinalFantasy',
@@ -230,7 +213,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                       ],
                     ),
                     Image.asset(
-                      finalFant[0].imgs[1],
+                      finalFant[0].img,
                       width: 350,
                       height: 250,
                     ),
@@ -244,7 +227,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     ),
                     Padding(padding: EdgeInsets.all(3)),
                     Text(
-                      yAmano.textosPags[8],
+                      yAmano.textosPags[8].toUpperCase(),
                       style: TextStyle(
                         fontSize: 35,
                         fontFamily: 'FinalFantasy'
@@ -259,7 +242,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                       ),
                     ),
                     Image.asset(
-                      finalFant[i].imgs[0],
+                      finalFant[i].img,
                       height: 300,
                       width: 300,
                     ),
@@ -312,14 +295,14 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     ),
                     Padding(padding: EdgeInsets.all(5)),
                     Text(
-                      yAmano.textosPags[9],
+                      yAmano.textosPags[9].toUpperCase(),
                       style: TextStyle(
                         fontSize: 35,
                         fontFamily: 'FinalFantasy'
                       ),
                     ),
                     Text(
-                      yAmano.textosPags[10],
+                      yAmano.textosPags[10].toUpperCase(),
                       style: TextStyle(
                         fontSize: 25,
                         fontFamily: 'FinalFantasy'

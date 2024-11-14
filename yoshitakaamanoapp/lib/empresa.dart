@@ -6,6 +6,8 @@ class Empresa {
   final String descricao;
   final String funcao;
   final String urlSiteEmpresa;
+  final String botaoSiteEmpresa;
+  final String textoPags;
 
   Empresa ({
     required this.nome,
@@ -13,9 +15,11 @@ class Empresa {
     required this.descricao,
     required this.funcao,
     required this.urlSiteEmpresa,
+    required this.botaoSiteEmpresa,
+    required this.textoPags,
   });
 
-  Future<void> abrirSite() async {
+  Future<void> abrirSiteEmpresa() async {
     final Uri url = Uri.parse(urlSiteEmpresa);
     if (!await launchUrl(url)) {
         throw Exception('Could not launch $url');

@@ -4,7 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 class Yoshitaka {
   final List<String> textosPags;
   final String nome;
-  final List<String> img;
+  final List<String> imgs;
   final String bio;
   final String urlSite;
   final IconData icon;
@@ -12,7 +12,7 @@ class Yoshitaka {
   Yoshitaka ({
     required this.textosPags,
     required this.nome,
-    required this.img,
+    required this.imgs,
     required this.bio,
     required this.urlSite,
     required this.icon,

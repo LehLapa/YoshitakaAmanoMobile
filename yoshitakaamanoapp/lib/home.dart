@@ -19,22 +19,23 @@ class _HomePag extends State<HomePag> {
   Yoshitaka yAmano = Yoshitaka(
     textosPags: [
       'Home', 
-      'BIOGRAFIA',
-      'SUA HISTORIA', 
-      'EMPRESAS',
+      'Biografia',
+      'Sua Historia', 
+      'Empresas',
       'Outros Jogos',
       'O renomado artista Yoshitaka Amano é conhecido por suas artes, principalmente por sua participação em…',
       'Voltar',
       'Final Fantasy',
-      'OUTROS TITULOS DA FRANQUIA',
-      'EVOLUCAO DE FINAL FANTASY',
-      'SERIE PRINCIPAL',
+      'Outros titulos da franquia',
+      'Evolucao de Final Fantasy',
+      'Serie principal',
       'Site Oficial\n Yoshitaka Amano'
     ],
-    nome: 'YOSHITAKA\n AMANO',
-    img: [
+    nome: 'Yoshitaka\n Amano',
+    imgs: [
       'img/homefundo.jpg',
       'img/biofundo.jpg',
+      'img/finalfantasyfundo.jpg',
       'img/fotosyoshi/yoshitaka1.jpg',
       'img/fotosyoshi/yoshitaka2.jpg',
       'img/fotosyoshi/yoshitaka3.jpg',
@@ -52,9 +53,9 @@ class _HomePag extends State<HomePag> {
         child: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage(yAmano.img[0]),
+              image: AssetImage(yAmano.imgs[0]),
               opacity: 0.4,
-              fit: BoxFit.fitHeight
+              fit: BoxFit.fill
             ),
           ),
           child: Column(
@@ -70,7 +71,7 @@ class _HomePag extends State<HomePag> {
                   ),
                 ),
                 child: Text(
-                  yAmano.nome,
+                  yAmano.nome.toUpperCase(),
                   style: const TextStyle(
                     color: Colors.black, 
                     fontFamily: 'FinalFantasy',
@@ -93,17 +94,17 @@ class _HomePag extends State<HomePag> {
                   }
                 ),
                 items: [
-                  Image.asset(yAmano.img[2], height: 300, width: 300,),
-                  Image.asset(yAmano.img[3], height: 1000, width: 1000,),
-                  Image.asset(yAmano.img[4], height: 300, width: 300,),
-                  Image.asset(yAmano.img[5], height: 300, width: 300,),
+                  Image.asset(yAmano.imgs[3], height: 300, width: 300,),
+                  Image.asset(yAmano.imgs[4], height: 1000, width: 1000,),
+                  Image.asset(yAmano.imgs[5], height: 300, width: 300,),
+                  Image.asset(yAmano.imgs[6], height: 300, width: 300,),
                 ],
               ),
               DotsIndicator(
                 dotsCount: 4,
                 position: currentIndex.toDouble(),
               ),
-              Padding(padding: EdgeInsets.all(5)),
+              Padding(padding: EdgeInsets.all(3)),
               Text(
                 yAmano.textosPags[5],
                 textAlign: TextAlign.center,
@@ -112,7 +113,7 @@ class _HomePag extends State<HomePag> {
                   fontSize: 17,
                 ),
               ),
-              Padding(padding: EdgeInsets.all(5)),
+              Padding(padding: EdgeInsets.all(3)),
               ElevatedButton(
                 onPressed: () => Navigator.push(
                   context,
