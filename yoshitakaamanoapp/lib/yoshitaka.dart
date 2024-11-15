@@ -6,6 +6,7 @@ class Yoshitaka {
   final String nome;
   final List<String> imgs;
   final String bio;
+  final String carreira;
   final String urlSite;
   final IconData icon;
 
@@ -14,6 +15,7 @@ class Yoshitaka {
     required this.nome,
     required this.imgs,
     required this.bio,
+    required this.carreira,
     required this.urlSite,
     required this.icon,
   });

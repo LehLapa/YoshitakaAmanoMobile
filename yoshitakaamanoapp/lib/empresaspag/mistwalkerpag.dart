@@ -14,12 +14,15 @@ class _MistwalkerPag extends State<MistwalkerPag> {
   final Colab colab = Colab(
     '', 
     titulo: 'Terra Battle',
-    img: '',
+    imgs: [
+      'img/colabs/mistwalker/terrabattle.jpg',
+      'img/empresasfundo.jpg'
+    ],
     descricao: 'Um RPG estratégico para dispositivos móveis, onde os jogadores posicionam personagens em uma grade para realizar ataques coordenados. Terra Battle utiliza uma mecânica de movimentação de peças em um tabuleiro, permitindo criar combos e ataques em cadeia. Com personagens e cenários desenhados por artistas renomados, o jogo se destacou pelo sistema de combate original e a promessa de expansão da história conforme o número de downloads aumentava.',
     funcaoDev: '',
-    lancamento: '',
-    distribuidora: '',
-    icons: []
+    lancamento: 'Lançamento: 9 de outubro de 2014',
+    distribuidora: 'Distribuidora: Mistwalker',
+    icons: [Icons.arrow_back_ios,]
   );
 
   @override
@@ -27,23 +30,38 @@ class _MistwalkerPag extends State<MistwalkerPag> {
     final empresa = ModalRoute.of(context)!.settings.arguments as Empresa;
     return Scaffold(
       body: Container(
-        color: const Color.fromARGB(255, 255, 216, 108),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(colab.imgs[1]),
+            opacity: 0.4,
+            fit: BoxFit.fill
+          ),
+        ),
         child: SingleChildScrollView(
           child: Container(
             padding: const EdgeInsets.all(16.0),
             margin: const EdgeInsets.all(16.0),
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 255, 248, 147),
-              borderRadius: BorderRadius.circular(45)
+              color: const Color.fromARGB(210, 255, 246, 227),
+              borderRadius: BorderRadius.circular(45),
             ),
             child: Column(
               children: <Widget>[
-                Text(
-                  empresa.nome.toUpperCase(),
-                  style: TextStyle(
-                    fontFamily: 'FinalFantasy',
-                    fontSize: 35,
-                  ),
+                Row(
+                  children: [
+                    IconButton(
+                      onPressed: () => Navigator.pop(context), 
+                      icon: Icon(colab.icons[0], color: Colors.black,),
+                    ),
+                    Padding(padding: EdgeInsets.all(62)),
+                    Text(
+                      empresa.nome.toUpperCase(),
+                      style: TextStyle(
+                        fontFamily: 'FinalFantasy',
+                        fontSize: 35,
+                      ),
+                    ),
+                  ],
                 ),
                 Image.asset(
                   empresa.imgLogo,
@@ -57,11 +75,15 @@ class _MistwalkerPag extends State<MistwalkerPag> {
                 ),
                 ElevatedButton(
                   onPressed: empresa.abrirSiteEmpresa,
+                  style: ButtonStyle(
+                    backgroundColor: WidgetStatePropertyAll( Color.fromARGB(255, 215, 185, 116),),
+                  ),
                   child: Text(
                     empresa.botaoSiteEmpresa,
                     style: TextStyle(
                       fontFamily: 'Lora',
                       fontWeight: FontWeight.w700,
+                      color: Colors.black
                     ),
                   ),
                 ),
@@ -69,13 +91,47 @@ class _MistwalkerPag extends State<MistwalkerPag> {
                   empresa.textoPags.toUpperCase(),
                   style: TextStyle(
                     fontFamily: 'FinalFantasy',
+                    fontSize: 35,
                   ),
                 ),
                 Text(
-                  colab.titulo
+                  colab.titulo,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 17,
+                    color: Colors.black
+                  ),
                 ),
                 Image.asset(
-                  colab.img
+                  colab.imgs[0]
+                ),
+                Text(
+                  colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.distribuidora,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.lancamento,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
                 ),
               ],
             ),

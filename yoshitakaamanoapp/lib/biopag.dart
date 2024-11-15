@@ -51,7 +51,7 @@ class _BioPag extends State<BioPag> {
       funcao: 'Atuou exclusivamente como designer de arte no jogo solo Kartia: The Word of Fate (1998).',
       urlSiteEmpresa: 'https://atlus.com',
       botaoSiteEmpresa: 'Site Oficial',
-      textoPags: 'Jogos colaborados'
+      textoPags: 'Jogo colaborado'
     ),
     Empresa(
       nome: 'ASCII Corporation', 
@@ -60,7 +60,7 @@ class _BioPag extends State<BioPag> {
       funcao: 'Atuou exclusivamente como designer de arte no jogo solo Kartia: The Word of Fate (1998).',
       urlSiteEmpresa: '',
       botaoSiteEmpresa: 'Site Oficial',
-      textoPags: 'Jogos colaborados'
+      textoPags: 'Jogo colaborado'
     ),
     Empresa(
       nome: 'Capcom', 
@@ -69,7 +69,7 @@ class _BioPag extends State<BioPag> {
       funcao: 'Desenvolveu o design de personagens para o jogo solo Maten Densetsu (1995).',
       urlSiteEmpresa: 'https://www.capcom.com',
       botaoSiteEmpresa: 'Site Oficial',
-      textoPags: 'Jogos colaborados'
+      textoPags: 'Jogo colaborado'
     ),
     Empresa(
       nome: 'Level-5', 
@@ -78,7 +78,7 @@ class _BioPag extends State<BioPag> {
       funcao: 'Para a Level-5, trabalhou como Designer de Imagem em Fantasy Life (2012).',
       urlSiteEmpresa: 'https://www.level5.co.jp',
       botaoSiteEmpresa: 'Site Oficial',
-      textoPags: 'Jogos colaborados'
+      textoPags: 'Jogo colaborado'
     ),
     Empresa(
       nome: 'Compile Heart', 
@@ -96,7 +96,7 @@ class _BioPag extends State<BioPag> {
       funcao: 'Exerceu a função de designer de personagens no jogo solo Terra Battle (2014), da Mistwalker.',
       urlSiteEmpresa: 'https://www.mistwalkercorp.com',
       botaoSiteEmpresa: 'Site Oficial',
-      textoPags: 'Jogos colaborados'
+      textoPags: 'Jogo colaborado'
     ),
     Empresa(
       nome: 'Ubisoft', 
@@ -105,23 +105,23 @@ class _BioPag extends State<BioPag> {
       funcao: 'Foi designer de imagem para o jogo solo Child of Light (2014), da Ubisoft.',
       urlSiteEmpresa: 'https://www.ubisoft.com',
       botaoSiteEmpresa: 'Site Oficial',
-      textoPags: 'Jogos colaborados'
+      textoPags: 'Jogo colaborado'
     ),
     Empresa(
       nome: 'DC Comics', 
-      imgLogo: '', 
-      descricao: '', 
+      imgLogo: 'img/logos/dc.jpg', 
+      descricao: 'DC Comics, uma das empresas mais renomadas de animações, filmes e histórias em quadrinhos. Yoshitaka Amano, trabalhou em Sandman: The Dream Chasers, uma história escrita por Neil Gaiman, ao qual, é adaptada uma lenda japonesa antiga e faz uma mistura de mitologias orientas e ocidentais, desse modo, Yoshitaka ilustra toda a versão em prosa, a pedido de Neil Gaiman.', 
       funcao: '', 
-      urlSiteEmpresa: '',
+      urlSiteEmpresa: 'https://www.dc.com/',
       botaoSiteEmpresa: 'Site Oficial',
       textoPags: 'Trabalho colaborado'
     ),
     Empresa(
       nome: 'Marvel', 
-      imgLogo: '', 
-      descricao: '', 
+      imgLogo: 'img/logos/marvel.jpg', 
+      descricao: 'Marvel Entertainment, atualmente conhecida como uma das maiores editoras de histórias em quadrinhos do mundo, também, expandindo seu alcance para outras mídias, como: séries, filmes e seu universo mágico de super-heróis. Desse modo, Yoshitaka Amano realizou as ilustrações da obra Elektra and Wolverine: The Redeemer, distribuida e publicada pela Marvel em 2002. A mini-série de três volumes segue uma linha similar a Sandman, contendo ilustrações de página inteira com textos estilizados as acompanhnado, pois como notado, Amano não trabalha com estilos clássicos de histórias em quadrinhos, assim contribuindo para um maior leque de narrativas para Marvel.', 
       funcao: '', 
-      urlSiteEmpresa: '',
+      urlSiteEmpresa: 'https://www.marvel.com/',
       botaoSiteEmpresa: 'Site Oficial',
       textoPags: 'Trabalho colaborado'
     ),
@@ -165,7 +165,7 @@ class _BioPag extends State<BioPag> {
               image: DecorationImage(
                 image: AssetImage(yAmano.imgs[1]),
                 opacity: 0.6,
-                fit: BoxFit.fitHeight,
+                fit: BoxFit.fill,
               )
             ),
             child: Center(
@@ -186,7 +186,7 @@ class _BioPag extends State<BioPag> {
                         ),
                         Padding(padding: EdgeInsets.all(62)),
                         Text(
-                          yAmano.textosPags[1], 
+                          yAmano.textosPags[1].toUpperCase(), 
                           style: TextStyle(
                             color: Colors.black,
                             fontFamily: 'FinalFantasy',
@@ -196,7 +196,7 @@ class _BioPag extends State<BioPag> {
                       ],
                     ),
                     Text(
-                      yAmano.textosPags[2],
+                      yAmano.textosPags[2].toUpperCase(),
                       style: TextStyle(
                         fontFamily: 'FinalFantasy',
                         fontSize: 35,
@@ -228,7 +228,23 @@ class _BioPag extends State<BioPag> {
                     ),
                     Padding(padding: EdgeInsets.all(10)),
                     Text(
-                      yAmano.textosPags[3],
+                      yAmano.textosPags[12].toUpperCase(),
+                      style: TextStyle(
+                        fontFamily: 'FinalFantasy',
+                        fontSize: 35,
+                      ),
+                    ),
+                    Text(
+                      yAmano.carreira,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        fontFamily: 'FacultyGlyphic',
+                        fontSize: 15,
+                      ),
+                    ),
+                    Padding(padding: EdgeInsets.all(5)),
+                    Text(
+                      yAmano.textosPags[3].toUpperCase(),
                       style: TextStyle(
                         fontFamily: 'FinalFantasy',
                         fontSize: 35,
@@ -239,7 +255,7 @@ class _BioPag extends State<BioPag> {
                       options: CarouselOptions(
                         autoPlay: true,
                         autoPlayAnimationDuration: const Duration(seconds: 3),
-                        autoPlayInterval: const Duration(seconds: 5),
+                        autoPlayInterval: const Duration(seconds: 10),
                         onPageChanged: (index, reason) {
                           setState((){
                             currentIndex = index;
@@ -285,7 +301,7 @@ class _BioPag extends State<BioPag> {
                         ),
                         IconButton(
                           onPressed: () => navegacao(pags[9]),
-                          icon: Image.asset(empresas[9].imgLogo)
+                          icon: Image.asset(empresas[9].imgLogo,)
                         ),
                         IconButton(
                           onPressed: () => navegacao(pags[10]),

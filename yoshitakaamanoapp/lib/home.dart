@@ -29,7 +29,8 @@ class _HomePag extends State<HomePag> {
       'Outros titulos da franquia',
       'Evolucao de Final Fantasy',
       'Serie principal',
-      'Site Oficial\n Yoshitaka Amano'
+      'Site Oficial\n Yoshitaka Amano',
+      'Sua Carreira'
     ],
     nome: 'Yoshitaka\n Amano',
     imgs: [
@@ -42,6 +43,7 @@ class _HomePag extends State<HomePag> {
       'img/fotosyoshi/yoshitaka4.jpg',
     ],
     bio: 'Yoshitaka Amano, nascido em 1952, ilustrador japonês reconhecido por desenvolver o design de personagens de séries de jogos, principalmente Final Fantasy, produzido por Softhouse Square, conhecido por uma das maiores franquias de videogames da indústria.\n Com origem em Shizuoka, sua arte gira em torno da gravura e xilogravura, impressões realizadas em superfícies duras com materiais especiais, e litografia, elaborando sua arte em acrílicos para colorir suas obras para que seus desenhos ganhem um efeito de ukiyo-e, estilo de arte japonês análogo à aquarela.\n Ele não trabalhou exclusivamente com ilustrações, mas também com pintura, filme, cerâmica e também contribuía para a padronagem/estampas de quimonos e figurinos teatrais. No decorrer de sua trajetória, ele se inspirou em muitos artistas europeus, criando seu próprio estilo e por esse motivo recebeu muitos prêmios, como o Oscar da Literatura fantástica de trabalhos de ficção e fantasia.\n O Yoshitaka começou seu trabalho na produtora de desenhos animados japoneses Tatsunoko Productions em 1967 e após um período ele pediu demissão, se tornando freelancer e deixou de ilustrar animes para ilustrar romances, incluindo a série heróica de fantasia Western, Guin Saga e Vampire Hunter D, e design de personagens.',
+    carreira: 'Sobre sua atuação no mercado, em primeiro plano, Yoshitaka trabalhou na Tatsunoko Productions produzindo animes, mas nos anos 80 ele pediu demissão e passou a trabalhar como freelancer produzindo os conteúdos já citados e em 1987 ele iniciou seus trabalhos na Square, sendo o principal artista da saga de jogos Final Fantasy, projetando personagens, inimigos, monstros, personagens de invocações, elementos artísticos para interface, logos e outros, desde o primeiro até o sexto jogo da franquia. Quando Final Fantasy passou a ser 3D, foi designado outro artista para ser o designer de personagens, no entanto, Yoshitaka continuou colaborando com as ilustrações, fazendo designs conceituais e os logotipos dos jogos posteriores, e assim ele voltou ao seu papel como designer de personagens principais ao Final Fantasy IX. Ainda na Square, ele fez design de personagens para Kartia e Front Mission, garantindo que cada jogo tivesse uma estética única, mas ao mesmo tempo que fosse reconhecível por seu traço.\n Na década de 90, Yoshitaka teve reconhecimento internacional e fundou seu próprio estúdio de animação chamado Devaloka fazendo parcerias com as duas maiores editoras de super-heróis americanos, sendo: a DC Comics com The Sandman: The Dream Hunters e a Marvel com Elektra e Wolverine: The Redeemer.',
     urlSite: 'https://www.yoshitakaamano.com',
     icon: Icons.arrow_back_ios
   );
