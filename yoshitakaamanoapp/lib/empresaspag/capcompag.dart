@@ -19,7 +19,7 @@ class _CapcomPag extends State<CapcomPag> {
       'img/empresasfundo.jpg'
     ],
     descricao: 'Uma série de RPG episódica lançada exclusivamente para o Dreamcast em sete partes. O jogo segue várias histórias interligadas de personagens que buscam o mítico Eldorado. El Dorado Gate utiliza gráficos 2D e uma narrativa que mistura fantasia e aventura, e destaca-se pela sua divisão em episódios, que oferecem uma experiência centrada no desenvolvimento de cada personagem e seus conflitos pessoais. O formato episódico foi inovador e único na época.',
-    funcaoDev: '',
+    funcaoDev: 'O Yoshitaka foi o diretor criativo e fez designs adicionais.',
     lancamento: 'Lançamento: 10 de outubro de 2000 a 10 de outubro de 2001.',
     distribuidora: 'Distribuidora: Capcom',
     icons: [Icons.arrow_back_ios,]
@@ -70,7 +70,12 @@ class _CapcomPag extends State<CapcomPag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -108,6 +113,15 @@ class _CapcomPag extends State<CapcomPag> {
                 ),
                 Text(
                   colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

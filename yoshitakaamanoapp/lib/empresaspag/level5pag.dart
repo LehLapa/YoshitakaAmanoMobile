@@ -19,7 +19,7 @@ class _Level5Pag extends State<Level5Pag> {
       'img/empresasfundo.jpg'
     ],
     descricao: 'Um RPG de simulação de vida para o Nintendo 3DS onde os jogadores escolhem entre várias “vidas” (ou classes), como guerreiro, mago ou ferreiro, cada uma com atividades únicas. O jogo combina elementos de RPG com mecânicas de construção e crafting, permitindo ao jogador alternar entre as vidas e progredir em cada uma. Fantasy Life é conhecido por seu estilo colorido, jogabilidade variada e possibilidade de exploração e cooperação em um mundo aberto e encantador.',
-    funcaoDev: '',
+    funcaoDev: 'O Yoshitaka foi designer de imagem.',
     lancamento: 'Lançamento: 27 de dezembro de 2012',
     distribuidora: 'Distribuidora: Nintendo',
     icons: [Icons.arrow_back_ios,]
@@ -70,7 +70,12 @@ class _Level5Pag extends State<Level5Pag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -108,6 +113,15 @@ class _Level5Pag extends State<Level5Pag> {
                 ),
                 Text(
                   colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

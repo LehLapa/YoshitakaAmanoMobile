@@ -24,7 +24,7 @@ class _SquarePag extends State<SquarePag> {
         'img/empresasfundo.jpg'
       ],
       descricao: 'Um RPG tático focado em combates com mechas conhecidas como "Wanzers". Ambientado em um mundo de conflitos políticos e territoriais, os jogadores controlam uma equipe de pilotos de mechas em missões estratégicas, abordando temas de guerra e intriga.',
-      funcaoDev: '',
+      funcaoDev: 'O Yoshitaka foi designer de personagem.',
       lancamento: 'Lançamento: 1995.',
       distribuidora: 'Distribuidora: Square Enix.',
       icons: [
@@ -37,7 +37,7 @@ class _SquarePag extends State<SquarePag> {
       titulo: 'Front Mission: Gun Hazard', 
       imgs: ['img/colabs/square/frontmission_gunhazard.jpg'], 
       descricao: 'Diferente do estilo de RPG tático de seu antecessor, Gun Hazard é um jogo de tiro com rolagem lateral, onde os jogadores comandam um Wanzer em missões de combate direto. A história ainda explora temas de guerra, com foco em ação rápida.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi designer de personagem.', 
       lancamento: 'Lançamento: 23 de fevereiro de 1996.', 
       distribuidora: 'Distribuidora: Square Enix.', 
       icons: []
@@ -47,7 +47,7 @@ class _SquarePag extends State<SquarePag> {
       titulo: 'Lord of Vermilion', 
       imgs: ['img/colabs/square/lordofvermilion.jpg'], 
       descricao: 'Um jogo de cartas e estratégia desenvolvido para arcades no Japão, onde os jogadores usam cartas físicas para invocar criaturas e lutar em uma arena virtual. Conhecido por sua combinação de estratégia e mecânicas de jogo colecionáveis.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador de cartas.', 
       lancamento: 'Lançamento: 17 de junho de 2008.', 
       distribuidora: 'Distribuidora: Square Enix.', 
       icons: []
@@ -57,7 +57,7 @@ class _SquarePag extends State<SquarePag> {
       titulo: 'Lord of Vermilion II', 
       imgs: ['img/colabs/square/lordofvermilion2.jpg'],
       descricao: 'Expande o elenco de criaturas e habilidades, com gráficos e mecânicas melhoradas. A sequência oferece mais opções de invocação e um sistema de combate aprimorado para os jogadores de arcade.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador de cartas.', 
       lancamento: 'Lançamento: 27 de outubro de 2009.', 
       distribuidora: 'Distribuidora: Square Enix.', 
       icons: []
@@ -67,7 +67,7 @@ class _SquarePag extends State<SquarePag> {
       titulo: 'Lord of Arcana', 
       imgs: ['img/colabs/square/lordofarcana.jpg'],
       descricao: 'Um jogo de ação e RPG para PSP onde os jogadores caçam monstros em missões desafiadoras, buscando ganhar poderes e completar a “Arcana”. O combate é focado em batalhas intensas, e o jogo atrai fãs de RPG e ação com um sistema cooperativo multijogador.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi designer de monstros.', 
       lancamento: 'Lançamento: 14 de outubro de 2010.', 
       distribuidora: 'Distribuidora: Square Enix.', 
       icons: []
@@ -149,7 +149,12 @@ class _SquarePag extends State<SquarePag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -215,6 +220,15 @@ class _SquarePag extends State<SquarePag> {
                 ),
                 Text(
                   colabs[i].descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colabs[i].funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

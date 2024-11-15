@@ -19,7 +19,7 @@ class _AtlusPag extends State<AtlusPag> {
       'img/empresasfundo.jpg'
     ],
     descricao: 'Kartia: The Word of Fate (1998) é um RPG tático desenvolvido pela Atlus para o PlayStation, conhecido por seu enredo elaborado e sistema de combate estratégico. O jogo permite aos jogadores controlar dois protagonistas, Lacryma e Toxa, cada um com uma perspectiva própria sobre uma guerra que ameaça seu mundo. Uma das mecânicas principais é o uso das "Kartias," cartas mágicas que permitem criar armas, armaduras e até invocar criaturas para a batalha. Essa mecânica adiciona uma camada estratégica, já que os recursos são limitados e devem ser usados com cuidado. Com ilustrações de Yoshitaka Amano e uma narrativa que explora temas de destino e moralidade, Kartia ganhou reconhecimento pela sua profundidade e inovação no gênero de RPGs táticos.',
-    funcaoDev: '',
+    funcaoDev: 'O Yoshitaka foi o designer de arte.',
     lancamento: 'Data de lançamento: 26 de março de 1998.',
     distribuidora: 'Distribuidora: Atlus.',
     icons: [Icons.arrow_back_ios,]
@@ -70,7 +70,12 @@ class _AtlusPag extends State<AtlusPag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -108,6 +113,15 @@ class _AtlusPag extends State<AtlusPag> {
                 ),
                 Text(
                   colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

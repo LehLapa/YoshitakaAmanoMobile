@@ -24,7 +24,7 @@ class _KskPag extends State<KskPag> {
         'img/empresasfundo.jpg'
       ],
       descricao: 'Um RPG de estratégia e ação em tempo real onde os jogadores lideram um exército para lutar contra forças inimigas em um mundo de fantasia. A mecânica "crowd control" permite controlar várias unidades simultaneamente, oferecendo uma experiência de batalhas em larga escala que era inovadora na época. O jogo trouxe um estilo de arte detalhado e teve uma capa de comercialização ilustrada para atrair o público.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador da capa de comercialização.', 
       lancamento: 'Lançamento: 1988.', 
       distribuidora: 'Distribuidora: Kure Software Koubou.', 
       icons: [
@@ -37,7 +37,7 @@ class _KskPag extends State<KskPag> {
       titulo: 'First Queen 2', 
       imgs: ['img/colabs/ksk/firstqueen2.jpg',], 
       descricao: 'Continuação direta do primeiro jogo, First Queen 2 expandiu o universo com novos personagens, habilidades e territórios. O sistema de controle em massa foi aprimorado, e o jogo apresentou desafios estratégicos mais complexos, dando ao jogador mais controle sobre suas tropas. Também teve uma capa ilustrada que refletia seu estilo épico e de fantasia.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador da capa de comercialização.', 
       lancamento: 'Lançamento: 1990.', 
       distribuidora: 'Distribuidora: Kure Software Koubou.', 
       icons: []
@@ -47,7 +47,7 @@ class _KskPag extends State<KskPag> {
       titulo: 'First Queen 3', 
       imgs: ['img/colabs/ksk/firstqueen3.jpg'], 
       descricao: 'Com gráficos atualizados e um mundo expandido, First Queen 3 adicionou novas camadas de jogabilidade, como melhorias na inteligência artificial dos aliados e inimigos. O jogo manteve seu estilo característico de batalhas estratégicas em tempo real e foi lançado com uma capa ilustrada que enfatizava seu tema de guerra e magia.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador da capa de comercialização.', 
       lancamento: 'Lançamento: 1993.', 
       distribuidora: 'Distribuidora: Kure Software Koubou.', 
       icons: []
@@ -57,7 +57,7 @@ class _KskPag extends State<KskPag> {
       titulo: 'Duel',
       imgs: ['img/colabs/ksk/duel.jpg'],
       descricao: 'Um jogo de estratégia baseado em batalhas entre personagens em combates um contra um, onde os jogadores precisam fazer escolhas táticas para vencer o oponente. Com gráficos simples e foco em jogabilidade estratégica, Duel apresentou uma capa ilustrada que atraiu o público interessado em batalhas táticas.',
-      funcaoDev: '',
+      funcaoDev: 'O Yoshitaka foi ilustrador da capa de comercialização.',
       lancamento: 'Lançamento: 1989.',
       distribuidora: 'Distribuidora: Kure Software Koubou.',
       icons: []
@@ -67,7 +67,7 @@ class _KskPag extends State<KskPag> {
       titulo: 'Duel98',
       imgs: ['img/colabs/ksk/duel.jpg'],
       descricao: 'Uma versão expandida de Duel, com melhorias em gráficos e mecânicas de combate, Duel98 trouxe mais opções de personagens e estratégias. A capa ilustrada seguiu o estilo do original, destacando a natureza competitiva e tática do jogo.',
-      funcaoDev: '',
+      funcaoDev: 'O Yoshitaka foi ilustrador da capa de comercialização.',
       lancamento: 'Lançamento: 1989.',
       distribuidora: 'Distribuidora: Kure Software Koubou.',
       icons: []
@@ -77,7 +77,7 @@ class _KskPag extends State<KskPag> {
       titulo: 'Kawanakajima Ibunroku',
       imgs: ['img/colabs/ksk/kawanakajima.jpg'],
       descricao: 'Um RPG de estratégia inspirado nas batalhas históricas de Kawanakajima, onde jogadores controlam generais e suas tropas em confrontos estratégicos. O jogo se diferencia ao misturar elementos históricos com fantasia, e sua capa ilustrada foi criada para refletir a temática de guerra feudal japonesa, atraindo jogadores interessados em cultura e história do Japão.',
-      funcaoDev: '',
+      funcaoDev: 'O Yoshitaka foi ilustrador da capa de comercialização.',
       lancamento: 'Lançamento: 1992.',
       distribuidora: 'Distribuidora: Kure Software Koubou.',
       icons: []
@@ -161,6 +161,12 @@ class _KskPag extends State<KskPag> {
                     fontFamily: 'FacultyGlyphic',
                   ),
                 ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                  ),
+                ),
                 ElevatedButton(
                   onPressed: empresa.abrirSiteEmpresa,
                   style: ButtonStyle(
@@ -224,6 +230,15 @@ class _KskPag extends State<KskPag> {
                 ),
                 Text(
                   colabs[i].descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colabs[i].funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

@@ -19,7 +19,7 @@ class _MistwalkerPag extends State<MistwalkerPag> {
       'img/empresasfundo.jpg'
     ],
     descricao: 'Um RPG estratégico para dispositivos móveis, onde os jogadores posicionam personagens em uma grade para realizar ataques coordenados. Terra Battle utiliza uma mecânica de movimentação de peças em um tabuleiro, permitindo criar combos e ataques em cadeia. Com personagens e cenários desenhados por artistas renomados, o jogo se destacou pelo sistema de combate original e a promessa de expansão da história conforme o número de downloads aumentava.',
-    funcaoDev: '',
+    funcaoDev: 'O Yoshitaka foi designer de personagens.',
     lancamento: 'Lançamento: 9 de outubro de 2014',
     distribuidora: 'Distribuidora: Mistwalker',
     icons: [Icons.arrow_back_ios,]
@@ -70,7 +70,12 @@ class _MistwalkerPag extends State<MistwalkerPag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -108,6 +113,15 @@ class _MistwalkerPag extends State<MistwalkerPag> {
                 ),
                 Text(
                   colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

@@ -19,7 +19,7 @@ class _AsciiPag extends State<AsciiPag> {
       'img/empresasfundo.jpg'
     ],
     descricao: 'Um RPG de horror com temática sobrenatural lançado para o Super Famicom. Maten Densetsu é ambientado em um mundo onde espíritos malignos ameaçam a humanidade, e o jogador assume o papel de personagens que enfrentam esses espíritos. O jogo se destaca por sua atmosfera sombria, narrativa baseada em mitologias orientais e uma combinação de exploração com batalhas estratégicas por turnos, tudo com um estilo gráfico detalhado para a época.',
-    funcaoDev: '',
+    funcaoDev: 'O Yoshitaka foi designer de personagem no jogo.',
     lancamento: 'Lançamento: 27 de outubro de 1995.',
     distribuidora: 'Distribuidora: ASCII Corporation.',
     icons: [Icons.arrow_back_ios,]
@@ -72,6 +72,12 @@ class _AsciiPag extends State<AsciiPag> {
                     fontFamily: 'FacultyGlyphic',
                   ),
                 ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                  ),
+                ),
                 ElevatedButton(
                   onPressed: empresa.abrirSiteEmpresa,
                   style: ButtonStyle(
@@ -107,6 +113,15 @@ class _AsciiPag extends State<AsciiPag> {
                 ),
                 Text(
                   colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

@@ -19,7 +19,7 @@ class _UbisoftPag extends State<UbisoftPag> {
       'img/empresasfundo.jpg'
     ],
     descricao: 'Um RPG de plataforma com visual de aquarela, onde o jogador controla Aurora, uma jovem princesa perdida em um mundo de fantasia chamado Lemuria. Inspirado em contos de fadas, o jogo apresenta um sistema de combate em turnos e elementos de resolução de quebra-cabeças. Child of Light é elogiado por seu estilo artístico encantador, poesia nas falas dos personagens e uma narrativa com temas de amadurecimento e esperança.',
-    funcaoDev: '',
+    funcaoDev: 'O Yoshitaka foi designer de imagens.',
     lancamento: 'Lançamento: 29 de abril de 2014',
     distribuidora: 'Distribuidora: Ubisoft',
     icons: [Icons.arrow_back_ios,]
@@ -70,7 +70,12 @@ class _UbisoftPag extends State<UbisoftPag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -108,6 +113,15 @@ class _UbisoftPag extends State<UbisoftPag> {
                 ),
                 Text(
                   colab.descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colab.funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',

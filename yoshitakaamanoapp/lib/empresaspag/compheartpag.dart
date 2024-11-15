@@ -24,7 +24,7 @@ class _CompHeartPag extends State<CompHeartPag> {
         'img/empresasfundo.jpg'
       ],
       descricao: 'Um RPG ambientado em um mundo onde deuses antigos criaram armas poderosas chamadas "Furies", e guerreiros conhecidos como Fencers lutam para coletá-las. O jogador controla Fang, um Fencer que se envolve em uma batalha épica para decidir o destino do mundo. Fairy Fencer F combina um sistema de combate em turnos com a customização de armas, sendo reconhecido por seu humor leve, personagens carismáticos e visuais inspirados em anime.',
-      funcaoDev: '',
+      funcaoDev: 'O Yoshitaka foi designer de arte.',
       lancamento: 'Lançamento: 10 de outubro de 2013.',
       distribuidora: 'Distribuidora: Compile Heart.',
       icons: [
@@ -37,7 +37,7 @@ class _CompHeartPag extends State<CompHeartPag> {
       titulo: 'Arc of Alchemis',
       imgs: ['img/colabs/compheart/arcofalchemis.jpg',],
       descricao: 'Um RPG de ação situado em um deserto devastado, onde a protagonista Quinn busca uma chave para restaurar o mundo. O jogo apresenta um sistema de combate em tempo real, com a habilidade de resolver quebra-cabeças no ambiente usando um dispositivo chamado "Lunagear." Arc of Alchemist é conhecido por sua atmosfera desoladora e mistura de exploração com elementos estratégicos.',
-      funcaoDev: '',
+      funcaoDev: 'O Yoshitaka foi designer de imagens.',
       lancamento: 'Lançamento: 7 de fevereiro de 2019.',
       distribuidora: 'Distribuidora: Idea Factory.',
       icons: []
@@ -119,7 +119,12 @@ class _CompHeartPag extends State<CompHeartPag> {
                   empresa.descricao,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
-
+                  ),
+                ),
+                Text(
+                  empresa.funcao,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
                   ),
                 ),
                 ElevatedButton(
@@ -185,6 +190,15 @@ class _CompHeartPag extends State<CompHeartPag> {
                 ),
                 Text(
                   colabs[i].descricao,
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    fontFamily: 'FacultyGlyphic',
+                    fontSize: 15,
+                    color: Colors.black
+                  ),
+                ),
+                Text(
+                  colabs[i].funcaoDev,
                   textAlign: TextAlign.justify,
                   style: TextStyle(
                     fontFamily: 'FacultyGlyphic',
