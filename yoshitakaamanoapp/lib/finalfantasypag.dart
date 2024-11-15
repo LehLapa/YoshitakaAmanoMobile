@@ -39,7 +39,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Final Fantasy Type-0', 
       imgs: ['img/finalfantasy/FinalFantasy_Type0.jpg'],
       descricao: 'Ambientado em um mundo devastado por guerras entre nações, Final Fantasy Type-0 foca na luta de estudantes habilidosos do grupo Class Zero que lutam contra uma invasão imperial. O jogo é conhecido por seu enredo sombrio, sistema de combate em tempo real e foco em temas de sacrifício e camaradagem.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador da arte promocional, designer de logo principal e designer de imagem.', 
       lancamento: 'Data de lançamento: 27 de outubro de 2011.', 
       distribuidora: '', 
       icons: []
@@ -49,7 +49,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Final Fantasy XIV', 
       imgs: ['img/finalfantasy/FinalFantasyXIV.jpg'],
       descricao: 'Um MMORPG situado no mundo de Eorzea, onde jogadores podem se aventurar sozinhos ou em grupo para completar missões, enfrentar chefes e explorar diversas áreas. Após um lançamento inicial falho, o jogo foi relançado como Final Fantasy XIV: A Realm Reborn, ganhando enorme popularidade devido à sua narrativa épica e constante atualização de conteúdo.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi designer de logo principal.', 
       lancamento: 'Data de lançamento: 22 de setembro de 2010.', 
       distribuidora: '', 
       icons: []
@@ -59,7 +59,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Final Fantasy XV', 
       imgs: ['img/finalfantasy/FinalFantasyXV.jpg'],
       descricao: 'Focado em uma jornada de amizade e vingança, Final Fantasy XV segue o príncipe Noctis e seus amigos enquanto tentam recuperar o reino perdido de Lucis. Com um vasto mundo aberto, combate em tempo real e gráficos impressionantes, o jogo é conhecido pelo seu sistema de exploração e pela narrativa emocional.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador da arte promocional, designer de logo principal e designer de imagem.', 
       lancamento: 'Data de lançamento: 29 de novembro de 2016.', 
       distribuidora: '', 
       icons: []
@@ -69,7 +69,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Dissidia Final Fantasy', 
       imgs: ['img/finalfantasy/FinalFantasy_Dissidia.jpg'],
       descricao: 'Um jogo de luta que reúne heróis e vilões de diversos títulos da série Final Fantasy, onde os personagens combatem em arenas dinâmicas. O sistema de combate único permite o uso de habilidades icônicas e evocações, sendo popular entre fãs pela interação entre personagens de diferentes jogos.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi designer de logo principal e designer de imagem.', 
       lancamento: 'Data de lançamento: 18 de dezembro de 2008.', 
       distribuidora: '', 
       icons: []
@@ -79,7 +79,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Dissidia 012 Final Fantasy', 
       imgs: ['img/finalfantasy/FinalFantasy_Dissidia012.jpg'],
       descricao: 'Continuação de Dissidia Final Fantasy, que expande o elenco de personagens e oferece melhorias no sistema de combate e narrativa. A história aborda batalhas épicas entre os personagens de Final Fantasy em um conflito entre as forças de Cosmos e Chaos.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi designer de logo principal e designer de imagem.', 
       lancamento: 'Data de lançamento: 3 de março de 2011.', 
       distribuidora: '', 
       icons: []
@@ -89,7 +89,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Mobius Final Fantasy', 
       imgs: ['img/finalfantasy/FinalFantasy_Mobius.jpg'],
       descricao: 'Um RPG para dispositivos móveis com gráficos avançados e um sistema de combate baseado em habilidades. O jogo segue a história de um herói amnésico que luta para salvar o mundo de Palamecia, trazendo uma narrativa complexa e eventos especiais com crossover de outros jogos da série.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi designer de logo principal.', 
       lancamento: 'Data de lançamento: 4 de junho de 2015.', 
       distribuidora: '', 
       icons: []
@@ -99,7 +99,7 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
       titulo: 'Final Fantasy: Brave Exvius', 
       imgs: ['img/finalfantasy/FinalFantasy_BraveExvius.jpg'],
       descricao: 'Um jogo de RPG tático para dispositivos móveis, onde jogadores exploram mapas e participam de batalhas em turnos. Brave Exvius combina um enredo original com a participação de personagens clássicos de Final Fantasy, sendo popular entre fãs por seu estilo nostálgico e eventos colaborativos.', 
-      funcaoDev: '', 
+      funcaoDev: 'O Yoshitaka foi ilustrador da arte promocional e designer de logo principal.', 
       lancamento: 'Data de lançamento: 22 de outubro de 2015.', 
       distribuidora: '', 
       icons: []
@@ -277,6 +277,15 @@ class _FinalFantasyPag extends State<FinalFantasyPag>{
                     Padding(padding: EdgeInsets.all(5),),
                     Text(
                       finalFant[i].descricao,
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        fontFamily: 'FacultyGlyphic',
+                        fontSize: 15,
+                        color: Colors.black
+                      ),
+                    ),
+                    Text(
+                      finalFant[i].funcaoDev,
                       textAlign: TextAlign.justify,
                       style: TextStyle(
                         fontFamily: 'FacultyGlyphic',
